@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "build": "tailwindcss -i ./input.css -o ./css/style.css",
+    "watch": "tailwindcss -i ./input.css -o ./css/style.css --watch",
+    "format": "prettier --write '**/*.html'"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "autoprefixer": "^10.4.20",
+    "flowbite": "^2.5.2",
+    "postcss": "^8.5.1",
+    "postcss-cli": "^11.0.0"
+  }
+}

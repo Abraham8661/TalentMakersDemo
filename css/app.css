@@ -1,0 +1,56 @@
+.trimTitle {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.trimDescription {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+#view-job-btn:hover{
+    color: white
+}
+
+.hideCate{
+    display: none
+}
+
+.maxImage{
+    max-width: 2.5rem;
+}
+
+.custom-checkbox:checked {
+    background-color: #6a0dad  !important; /* Custom blue color with important flag */
+    border-color: #6a0dad  !important; /* Ensure border color also changes */
+  }
+  .custom-checkbox {
+    height: 1em;
+    width: 1em;
+    border-radius: 0.25em;
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #6a0dad ; /* Default Tailwind gray-300 */
+    outline: none;
+  }
+
+  /* Reset button styles specifically */
+button {
+    all: unset;
+    background: none;
+    color: inherit;
+    border: none;
+    font-size: inherit;
+    padding: inherit;
+  }
+  
+  /* Reset other elements */
+  input, textarea {
+    all: unset;
+  }
+  
+/* Firefox */ progress::-moz-progress-bar { background-color: #4caf50; /* Green */ } /* Chrome, Safari, Opera */ progress::-webkit-progress-bar { background-color: #e0e0e0; /* Light grey */ } progress::-webkit-progress-value { background-color: #4caf50; /* Green */ } /* Default styling */ progress { width: 100%; /* Adjust as needed */ height: 20px; /* Adjust as needed */ border-radius: 5px; overflow: hidden; }
