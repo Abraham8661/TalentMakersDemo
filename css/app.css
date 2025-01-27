@@ -48,11 +48,12 @@ button {
   padding: inherit;
 }
 
-/* Reset other elements */
+/* Reset other elements 
 input,
 textarea {
   all: unset;
 }
+*/
 
 /* Firefox */
 progress::-moz-progress-bar {

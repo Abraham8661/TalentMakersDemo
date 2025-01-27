@@ -28,14 +28,14 @@
   <div class="p-5 bg-white rounded-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%] h-full">
     <div class="flex items-center justify-center gap-[20px] w-full">
       <h2 class="text-gray-900 text-xl lg:text-2xl font-bold leading-normal lg:leading-[44px] w-full text-center">Program Registration</h2>
-      <div id="close-program-form-popup"><i class="fa-solid fa-xmark" style="color: #000000;"></i></div>
+      <div id="close-program-form-popup" class="cursor-pointer"><i class="fa-solid fa-xmark" style="color: #000000;"></i></div>
     </div>
     <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Take the first step toward a brighter future. Fill out the form below to secure your spot in this program.</p>
     <!--Registration form-->
     <form action="" method="post" class="flex flex-col items-start justify-start gap-[20px] w-full h-full overflow-y-scroll">
       <!--Personal Info Section-->
       <div class="flex flex-col items-start justify-start gap-[10px] w-full">
-        <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Address Information</h6>
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Personal Information</h6>
         <!--Form item-->
         <div class="flex flex-col gap-[10px] items-start justify-start w-full">
           <label for="firstName" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Full Name </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
@@ -61,7 +61,7 @@
       </div>
       <!--Address Information Section-->
       <div class="flex flex-col items-start justify-start gap-[10px] w-full">
-        <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Personal Information</h6>
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Address Information</h6>
         <!--Form item-->
         <div class="flex flex-col gap-[10px] items-start justify-start w-full">
           <label for="CityRegion" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">City/Region </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
@@ -333,8 +333,8 @@
         <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Educational Background</h6>
         <!--Form item-->
         <div class="flex flex-col gap-[10px] items-start justify-start w-full">
-          <label for="gender" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Education Level </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
-          <select name="gender" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          <label for="education" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Education Level </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+          <select name="education" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
             <option value="" disabled selected>Select..</option>
             <option value="Male">Primary school leaver</option>
             <option value="Female">SSCE</option>
@@ -398,12 +398,12 @@
 </section>
 
 <!--Program Information Section-->
-<section id="transform-lives-section" class="lg:max-w-[85rem] px-6 lg:px-0 w-full flex flex-col lg:flex-row mx-auto mt-[80px] lg:mt-[80px] justify-between items-start gap-[20px] lg:gap-[20px]">
+<section id="transform-lives-section" class="lg:max-w-[85rem] px-6 lg:px-0 w-full flex flex-col lg:flex-row mx-auto mt-[40px] lg:mt-[80px] justify-between items-start gap-[20px] lg:gap-[20px]">
   <div class="flex flex-col gap-[20px] flex-start items-start w-full lg:w-1/2">
     <!--Why Choose the program section-->
     <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[20px] inline-flex w-full">
         <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose">Why Choose Our Web Development Bootcamp?</h6>
-        <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7 line-clamp-2">This intensive 12-week program is designed to transform complete beginners into job-ready web developers. With hands-on projects, mentorship from industry experts, and access to the latest tools, you’ll gain the skills to build beautiful, functional, and user-friendly websites.</p>
+        <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7">This intensive 12-week program is designed to transform complete beginners into job-ready web developers. With hands-on projects, mentorship from industry experts, and access to the latest tools, you’ll gain the skills to build beautiful, functional, and user-friendly websites.</p>
     </div>
     <!--Programs details section-->
     <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[20px] inline-flex w-full">
