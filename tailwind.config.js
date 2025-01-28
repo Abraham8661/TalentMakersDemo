@@ -15,6 +15,9 @@ module.exports = {
         getInvolvedImageDesktop: "url('images/getInvolved_Desktop.png')",
         getInvolvedImageMob: "url('images/getInvolved_mobile.png')",
       },
+      fontFamily: {
+        sans: ["DM Sans", "serif"], // Add 'Roboto' as the default sans font
+      },
     },
   },
   plugins: [

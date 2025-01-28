@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/trial.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/106c35bf5a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/moment/min/moment.min.js"
+      defer
+    ></script>
+    <script src="Scripts/contactUs.js" defer></script>
+  </head>
+  <body class="bg-[#F4F4F4]"></body>
+</html>
+
+<!--Header and Nav Bar-->
+<section class="w-full mx-auto">
+    <div id="nav-bar" class="w-full flex items-center bg-white px-[1.3rem] lg:px-[50px] py-5 shadow-md justify-between">
+      <a href="./index.html"><img class="w-[120px] lg:w-[170px]" src="images/TalentMakers Logosvg.svg" alt=""></a>
+        <ul id="nav-links" class="hidden lg:flex justify-start items-center gap-10">
+          <a href="./index.html"><li class="text-greyColor text-lg font-medium">Home</li></a>
+          <a href=""><li class="text-greyColor text-lg font-medium">Programs</li></a>
+          <a href=""><li class="text-greyColor text-lg font-medium">Events</li></a>
+          <a href=""><li class="text-greyColor text-lg font-medium">About us</li></a>
+          <a href=""><li class="text-priColor text-lg font-bold">Contact us</li></a>
+          <a href=""><li class="text-greyColor text-lg font-medium">Blog</li></a>
+        </ul>
+        <div id="menu-btn" class="lg:hidden"><i class="fa-solid fa-bars" style="color: #000000;"></i></div>
+        <a href=""class="hidden lg:flex px-5 py-2.5 bg-priColor text-white text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Get involved</a>
+    </div>
+    <div class="hidden w-[291px] h-[291px] bg-[#ffd700] rounded-full absolute mb-10"></div>
+</section>
+
+ <!--Mobile Menu popup-->
+ <section id="mobileMenu" class="w-full gap-[10px] lg:gap-[20px] hidden lg:hidden flex-col items-center justify-center z-20 shadow-xl absolute duration-100 transition-transform">
+  <div class="p-5 bg-white rounded-b-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%] h-full">
+    <div id="" class="flex flex-col items-center justify-center gap-10">
+        <ul id="" class="flex flex-col justify-start items-center gap-10">
+          <a href="./index.html"><li class="text-gray-950 text-lg font-medium">Home</li></a>
+          <a href="./programs.html"><li class="text-gray-950 text-lg font-medium">Programs</li></a>
+          <a href=""><li class="text-gray-950 text-lg font-medium">Events</li></a>
+          <a href=""><li class="text-gray-950 text-lg font-medium">About us</li></a>
+          <a href=""><li class="text-gray-950 text-lg font-medium">Contact us</li></a>
+          <a href=""><li class="text-gray-950 text-lg font-medium">Blog</li></a>
+        </ul>
+        <a href=""class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5 w-full">Get involved</a>
+    </div>
+  </section>
+
+  <!--Hero Section-->
+  <section id="hero-section" class="lg:max-w-[85rem] px-6 lg:px-0 w-full flex flex-col lg:flex-row mx-auto mt-[80px] lg:mt-[80px] justify-start lg:justify-between items-center gap-[40px] lg:gap-0">
+    <div class="flex flex-col gap-[20px] items-start">
+      <h1 class="text-gray-900 text-2xl lg:text-5xl font-bold leading-[30px] lg:leading-[64px]">Get in Touch with Us!</h1>
+      <p class="flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Have questions, ideas, or want to collaborate? We’re here to connect with you!</p>
+        <form action="" method="post" class="p-5 bg-white rounded-[20px] flex-col justify-start items-start gap-5 flex w-full">
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="fullName" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Name </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <input type="text" placeholder="Enter your full name" name="fullName" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="email" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Email address </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <input type="email" placeholder="Enter your email address" name="email" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="subject" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Subject</label>
+            <select name="subject" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+              <option value="" disabled selected>Select..</option>
+              <option value="GeneralInquiry">General Inquiry</option>
+              <option value="PartnershipRequest">Partnership Request</option>
+              <option value="Volunteering">Volunteering</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="message" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Message</label>
+            <textarea name="message" rows="4" placeholder="Enter your message here..." class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7"></textarea>
+          </div>
+          <button class="flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Send message</button>
+        </form>
+    </div>
+      <img class="w-full lg:w-[650px] h-[300px] lg:h-[647px] rounded-[5px]" src="images/contactUs/ContactUSHero.png"/>
+  </section>
+
+  <!--Frequently asked question Section-->
+ <section id="" class="lg:max-w-[85rem] px-6 lg:px-0 w-full flex flex-col mx-auto mt-[80px] lg:mt-[150px] mb-[40px] justify-center items-center gap-[40px] lg:gap-[40px]">
+  <div class="flex flex-col items-center justify-center gap-[20px] w-full lg:w-[754px]">
+    <h2 class="text-gray-900 text-xl lg:text-[36px] font-bold leading-normal lg:leading-[44px]">Frequently Asked Questions</h2>
+  </div>
+  <!--All questions-->
+  <div class="flex flex-col lg:flex-row lg:flex-wrap justify-center items-start w-full gap-[20px]">
+    <!--Question box: This can be made dynamic from the admin dashboard-->
+    <details class="p-4 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[10px] inline-flex w-full lg:w-[40%]">
+      <summary class="flex items-center justify-between w-full gap-5">
+        <!--Question-->
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold leading-tight line-clamp-2">What is TalentMakers Foundation's mission?</h6>
+        <svg class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <!--Answer-->
+      <div class="px-2 py-3 bg-gray-100">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">TalentMakers Foundation is committed to empowering underprivileged African youth with world-class IT education and creating pathways to sustainable employment, fostering innovation, and driving economic transformation.</p>
+      </div>
+    </details>
+    <!--End Question box-->
+    <details class="p-4 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[10px] inline-flex w-full lg:w-[40%]">
+      <summary class="flex items-center justify-between w-full gap-5">
+        <!--Question-->
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold leading-tight line-clamp-2">Who can join your programs?</h6>
+        <svg class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <!--Answer-->
+      <div class="px-2 py-3 bg-gray-100">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Our programs are open to African youth from underprivileged backgrounds who demonstrate a passion for learning and a commitment to personal and professional growth.</p>
+      </div>
+    </details>
+    <details class="p-4 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[10px] inline-flex w-full lg:w-[40%]">
+      <summary class="flex items-center justify-between w-full gap-5">
+        <!--Question-->
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold leading-tight line-clamp-2">Where are your programs offered?
+        </h6>
+        <svg class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <!--Answer-->
+      <div class="px-2 py-3 bg-gray-100">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Our programs are conducted both online and in-person, reaching participants across Africa. Check our Programs page for specific locations and availability.</p>
+      </div>
+    </details>
+    <details class="p-4 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[10px] inline-flex w-full lg:w-[40%]">
+      <summary class="flex items-center justify-between w-full gap-5">
+        <!--Question-->
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold leading-tight line-clamp-2">How can I support TalentMakers Foundation?</h6>
+        <svg class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <!--Answer-->
+      <div class="px-2 py-3 bg-gray-100">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Who can support us by donating, volunteering, partnering with us, or simply spreading the word about our mission and programs..</p>
+      </div>
+    </details>
+    <details class="p-4 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[10px] inline-flex w-full lg:w-[40%]">
+      <summary class="flex items-center justify-between w-full gap-5 gap-5">
+        <!--Question-->
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold leading-tight line-clamp-2">How can I stay updated on events and initiatives?</h6>
+        <svg class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <!--Answer-->
+      <div class="px-2 py-3 bg-gray-100">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Subscribe to our newsletter, follow us on social media, or regularly check our website for updates on programs, events, and impact stories.</p>
+      </div>
+    </details>
+    <details class="p-4 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[10px] inline-flex w-full lg:w-[40%]">
+      <summary class="flex items-center justify-between w-full gap-5">
+        <!--Question-->
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold leading-tight line-clamp-2">How can I volunteer with TalentMakers Foundation?
+        </h6>
+        <svg class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <!--Answer-->
+      <div class="px-2 py-3 bg-gray-100">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Fill out the volunteer application form on our "Get Involved" page, or contact us directly for more details.</p>
+      </div>
+    </details>
+  </div>
+  </section>
+
+
+
+ <!--Get involved Section-->
+ <section id="get-involved-section" class="max-w-sm lg:max-w-[85rem] px-6 py-10 lg:py-20 lg:px-0 flex flex-col mx-auto mt-[80px] lg:mt-[150px] justify-center items-center gap-[40px] lg:gap-[40px] bg-[url('../images/getInvolved_Desktop.png')] md:bg-[url('../images/getInvolved_Desktop.png')] bg-cover bg-center bg-no-repeat rounded-[20px]">
+    <div class="flex flex-col gap-[20px] items-center justify-center text-center">
+      <h1 class="text-white text-2xl lg:text-5xl font-bold leading-[30px] lg:leading-[64px]">Join Us in Empowering Talents</h1>
+      <p class="text-white text-base lg:text-lg font-normal leading-tight lg:leading-7">Together, we can create opportunities, foster innovation, and drive lasting change. Be a <br> part of the movement to transform lives through technology and education</p>
+      <a href=""class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Get involved</a>
+    </div>
+    </section>
+  
+     <!--Footer Section-->
+   <footer id="footer-section" class="px-[1.3rem] lg:px-[50px] py-[1.3rem] lg:py-[50px] bg-lightBg w-full flex flex-col mx-auto mt-[80px] lg:mt-[150px] justify-between items-center gap-[20px] lg:gap-[40px]">
+      <div class="w-full flex flex-col lg:flex-row mx-auto justify-between items-start gap-[20px] lg:gap-[80px]">
+      <div class="flex flex-col items-start justify-start gap-[20px] w-full">
+        <img class="w-[120px] lg:w-[170px]" src="images/TalentMakers Logosvg.svg" alt="">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7 w-full">TalentMakers Foundation transforms lives through IT education, employment, and innovation. Join us to create lasting impact.</p>
+        <div class="flex gap-2">
+          <img src="images/mail.svg" alt="">
+          <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">info@talentmakersfoundation.org</p>
+        </div>
+      </div>
+      <div class="flex items-start justify-start gap-[20px] w-full">
+        <ul class="flex flex-col items-start justify-start gap-[20px] w-full">
+          <li class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Quick Links</li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href="">About us</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href="">Programs</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href="">Events</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href="">Blog</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href="">Contact us</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href="">Privacy Policy</a></li>
+        </ul>
+        <ul class="flex flex-col items-start justify-start gap-[20px] w-full">
+          <li class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Social Media</li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href=""><i class="fa-brands fa-facebook" style="color: #111827;"></i> Facebook</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href=""><i class="fa-brands fa-x-twitter" style="color: #111827;"></i> Twitter</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href=""><i class="fa-brands fa-linkedin" style="color: #111827;"></i> LinkedIn</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href=""><i class="fa-brands fa-instagram" style="color: #111827;"></i> Instagram</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href=""><i class="fa-brands fa-youtube" style="color: #111827;"></i> Youtube</a></li>
+        </ul>
+    </div>
+    <div class="flex flex-col items-start justify-start gap-[20px] w-full">
+      <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Get connected</p>
+      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Get updates on our latest programs, success stories, and events. Subscribe to our newsletter today!</p>
+      <form action="" class="flex items-center justify-between w-full gap-[20px]">
+        <input type="text" placeholder="Enter your email address" class="self-stretch p-2.5 rounded-[5px] bg-transparent w-full border border-gray-900 justify-start items-center gap-2.5 flex">
+        <button class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Subscribe</button>
+      </form>
+      <div class="flex items-center justify-start gap-[10px]">
+        <input type="checkbox" class="custom-checkbox" checked>
+        <p class="text-gray-900 text-sm font-normal leading-tight">By subscribing, you agree to our Privacy Policy and consent to receive updates from us.</p>
+      </div>
+    </div>
+    </div>
+    <div class="py-2.5 border-t border-[#e0e1e2] justify-center items-center text-center inline-flex w-full">
+      <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight">All rights reserved. © 2024 TalentMakers Foundation.</p>
+    </div>
+    </footer>
+
+
+</body>
+</html>
