@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get involved</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/trial.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/106c35bf5a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/moment/min/moment.min.js"
+      defer
+    ></script>
+    <script src="Scripts/getInvolved.js" defer></script>
+  </head>
+  <body class="bg-[#F4F4F4]"></body>
+</html>
+
+
+
+<!--Volunteer Registration form popup-->
+<section id="volunteer-form-popup-section" class="p-6 w-full gap-[10px] lg:gap-[20px] hidden flex-col items-center justify-center h-full z-20 bg-black/70 fixed">
+    <div class="p-5 bg-white rounded-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%] h-full">
+      <div class="flex items-center justify-center gap-[20px] w-full">
+        <h2 class="text-gray-900 text-xl lg:text-2xl font-bold leading-normal lg:leading-[44px] w-full text-center">Join Us as a Volunteer!</h2>
+        <div id="close-volunteer-form-popup" class="cursor-pointer"><i class="fa-solid fa-xmark" style="color: #000000;"></i></div>
+      </div>
+      <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Empower African youth through IT education and mentorship by sharing your time, skills, and passion.</p>
+      <!--Registration form-->
+      <form action="" method="post" class="flex flex-col items-start justify-start gap-[20px] w-full h-full overflow-y-scroll">
+        <!--Personal Info Section-->
+        <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+          <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Personal Information</h6>
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="fullName" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Full Name </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <input type="text" placeholder="Enter your full name" name="fullName" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="email" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Email address </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <input type="email" placeholder="Enter your email address" name="email" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="phoneNumber" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Phone number</label>
+            <input type="tel" placeholder="Enter your phone number" name="phoneNumber" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="gender" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Gender</label>
+            <select name="gender" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+              <option value="" disabled selected>Select..</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+        </div>
+        <!-- Location & Availability Section-->
+        <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+          <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Location & Availability</h6>
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="CityRegion" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">City/Region </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <input type="text" placeholder="Enter your city or region" name="CityRegion" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="country" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Country </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <select name="country" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+              <option class="text-base lg:text-lg font-normal" value="" disabled selected>Select..</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Åland Islands">Åland Islands</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="American Samoa">American Samoa</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Anguilla">Anguilla</option>
+              <option value="Antarctica">Antarctica</option>
+              <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armenia">Armenia</option>
+              <option value="Aruba">Aruba</option>
+              <option value="Australia">Australia</option>
+              <option value="Austria">Austria</option>
+              <option value="Azerbaijan">Azerbaijan</option>
+              <option value="Bahamas">Bahamas</option>
+              <option value="Bahrain">Bahrain</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Barbados">Barbados</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Belize">Belize</option>
+              <option value="Benin">Benin</option>
+              <option value="Bermuda">Bermuda</option>
+              <option value="Bhutan">Bhutan</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+              <option value="Botswana">Botswana</option>
+              <option value="Bouvet Island">Bouvet Island</option>
+              <option value="Brazil">Brazil</option>
+              <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+              <option value="Brunei Darussalam">Brunei Darussalam</option>
+              <option value="Bulgaria">Bulgaria</option>
+              <option value="Burkina Faso">Burkina Faso</option>
+              <option value="Burundi">Burundi</option>
+              <option value="Cambodia">Cambodia</option>
+              <option value="Cameroon">Cameroon</option>
+              <option value="Canada">Canada</option>
+              <option value="Cape Verde">Cape Verde</option>
+              <option value="Cayman Islands">Cayman Islands</option>
+              <option value="Central African Republic">Central African Republic</option>
+              <option value="Chad">Chad</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Christmas Island">Christmas Island</option>
+              <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Comoros">Comoros</option>
+              <option value="Congo">Congo</option>
+              <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+              <option value="Cook Islands">Cook Islands</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Cote D'ivoire">Cote D'ivoire</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Cyprus">Cyprus</option>
+              <option value="Czech Republic">Czech Republic</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Djibouti">Djibouti</option>
+              <option value="Dominica">Dominica</option>
+              <option value="Dominican Republic">Dominican Republic</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Egypt">Egypt</option>
+              <option value="El Salvador">El Salvador</option>
+              <option value="Equatorial Guinea">Equatorial Guinea</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Estonia">Estonia</option>
+              <option value="Ethiopia">Ethiopia</option>
+              <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+              <option value="Faroe Islands">Faroe Islands</option>
+              <option value="Fiji">Fiji</option>
+              <option value="Finland">Finland</option>
+              <option value="France">France</option>
+              <option value="French Guiana">French Guiana</option>
+              <option value="French Polynesia">French Polynesia</option>
+              <option value="French Southern Territories">French Southern Territories</option>
+              <option value="Gabon">Gabon</option>
+              <option value="Gambia">Gambia</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Germany">Germany</option>
+              <option value="Ghana">Ghana</option>
+              <option value="Gibraltar">Gibraltar</option>
+              <option value="Greece">Greece</option>
+              <option value="Greenland">Greenland</option>
+              <option value="Grenada">Grenada</option>
+              <option value="Guadeloupe">Guadeloupe</option>
+              <option value="Guam">Guam</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Guernsey">Guernsey</option>
+              <option value="Guinea">Guinea</option>
+              <option value="Guinea-bissau">Guinea-bissau</option>
+              <option value="Guyana">Guyana</option>
+              <option value="Haiti">Haiti</option>
+              <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+              <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+              <option value="Honduras">Honduras</option>
+              <option value="Hong Kong">Hong Kong</option>
+              <option value="Hungary">Hungary</option>
+              <option value="Iceland">Iceland</option>
+              <option value="India">India</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+              <option value="Iraq">Iraq</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Isle of Man">Isle of Man</option>
+              <option value="Israel">Israel</option>
+              <option value="Italy">Italy</option>
+              <option value="Jamaica">Jamaica</option>
+              <option value="Japan">Japan</option>
+              <option value="Jersey">Jersey</option>
+              <option value="Jordan">Jordan</option>
+              <option value="Kazakhstan">Kazakhstan</option>
+              <option value="Kenya">Kenya</option>
+              <option value="Kiribati">Kiribati</option>
+              <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+              <option value="Korea, Republic of">Korea, Republic of</option>
+              <option value="Kuwait">Kuwait</option>
+              <option value="Kyrgyzstan">Kyrgyzstan</option>
+              <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+              <option value="Latvia">Latvia</option>
+              <option value="Lebanon">Lebanon</option>
+              <option value="Lesotho">Lesotho</option>
+              <option value="Liberia">Liberia</option>
+              <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+              <option value="Liechtenstein">Liechtenstein</option>
+              <option value="Lithuania">Lithuania</option>
+              <option value="Luxembourg">Luxembourg</option>
+              <option value="Macao">Macao</option>
+              <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+              <option value="Madagascar">Madagascar</option>
+              <option value="Malawi">Malawi</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Maldives">Maldives</option>
+              <option value="Mali">Mali</option>
+              <option value="Malta">Malta</option>
+              <option value="Marshall Islands">Marshall Islands</option>
+              <option value="Martinique">Martinique</option>
+              <option value="Mauritania">Mauritania</option>
+              <option value="Mauritius">Mauritius</option>
+              <option value="Mayotte">Mayotte</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+              <option value="Moldova, Republic of">Moldova, Republic of</option>
+              <option value="Monaco">Monaco</option>
+              <option value="Mongolia">Mongolia</option>
+              <option value="Montenegro">Montenegro</option>
+              <option value="Montserrat">Montserrat</option>
+              <option value="Morocco">Morocco</option>
+              <option value="Mozambique">Mozambique</option>
+              <option value="Myanmar">Myanmar</option>
+              <option value="Namibia">Namibia</option>
+              <option value="Nauru">Nauru</option>
+              <option value="Nepal">Nepal</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="Netherlands Antilles">Netherlands Antilles</option>
+              <option value="New Caledonia">New Caledonia</option>
+              <option value="New Zealand">New Zealand</option>
+              <option value="Nicaragua">Nicaragua</option>
+              <option value="Niger">Niger</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="Niue">Niue</option>
+              <option value="Norfolk Island">Norfolk Island</option>
+              <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+              <option value="Norway">Norway</option>
+              <option value="Oman">Oman</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Palau">Palau</option>
+              <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+              <option value="Panama">Panama</option>
+              <option value="Papua New Guinea">Papua New Guinea</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Peru">Peru</option>
+              <option value="Philippines">Philippines</option>
+              <option value="Pitcairn">Pitcairn</option>
+              <option value="Poland">Poland</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Puerto Rico">Puerto Rico</option>
+              <option value="Qatar">Qatar</option>
+              <option value="Reunion">Reunion</option>
+              <option value="Romania">Romania</option>
+              <option value="Russian Federation">Russian Federation</option>
+              <option value="Rwanda">Rwanda</option>
+              <option value="Saint Helena">Saint Helena</option>
+              <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+              <option value="Saint Lucia">Saint Lucia</option>
+              <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+              <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+              <option value="Samoa">Samoa</option>
+              <option value="San Marino">San Marino</option>
+              <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+              <option value="Saudi Arabia">Saudi Arabia</option>
+              <option value="Senegal">Senegal</option>
+              <option value="Serbia">Serbia</option>
+              <option value="Seychelles">Seychelles</option>
+              <option value="Sierra Leone">Sierra Leone</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Slovakia">Slovakia</option>
+              <option value="Slovenia">Slovenia</option>
+              <option value="Solomon Islands">Solomon Islands</option>
+              <option value="Somalia">Somalia</option>
+              <option value="South Africa">South Africa</option>
+              <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+              <option value="Spain">Spain</option>
+              <option value="Sri Lanka">Sri Lanka</option>
+              <option value="Sudan">Sudan</option>
+              <option value="Suriname">Suriname</option>
+              <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+              <option value="Swaziland">Swaziland</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+              <option value="Taiwan">Taiwan</option>
+              <option value="Tajikistan">Tajikistan</option>
+              <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Timor-leste">Timor-leste</option>
+              <option value="Togo">Togo</option>
+              <option value="Tokelau">Tokelau</option>
+              <option value="Tonga">Tonga</option>
+              <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+              <option value="Tunisia">Tunisia</option>
+              <option value="Turkey">Turkey</option>
+              <option value="Turkmenistan">Turkmenistan</option>
+              <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+              <option value="Tuvalu">Tuvalu</option>
+              <option value="Uganda">Uganda</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="United Arab Emirates">United Arab Emirates</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+              <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Uzbekistan">Uzbekistan</option>
+              <option value="Vanuatu">Vanuatu</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Viet Nam">Viet Nam</option>
+              <option value="Virgin Islands, British">Virgin Islands, British</option>
+              <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+              <option value="Wallis and Futuna">Wallis and Futuna</option>
+              <option value="Western Sahara">Western Sahara</option>
+              <option value="Yemen">Yemen</option>
+              <option value="Zambia">Zambia</option>
+              <option value="Zimbabwe">Zimbabwe</option>
+            </select>
+          </div>
+            <!--Form item-->
+            <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+                <label for="volunteerMode" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Preferred Volunteering Mode </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+                <select name="volunteerMode" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+                  <option value="" disabled selected>Select..</option>
+                  <option value="In-Person">In-Person</option>
+                  <option value="Remote/Online">Remote/Online</option>
+                  <option value="Hybrid">Hybrid</option>
+                </select>
+            </div>
+            <!--Form item-->
+            <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+                <label for="availability" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Availability </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+                <select name="availability" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+                  <option value="" disabled selected>Select..</option>
+                  <option value="Weekdays">Weekdays (Morning/Afternoon/Evening)</option>
+                  <option value="Weekends">Weekends (Morning/Afternoon/Evening)</option>
+                </select>
+            </div>
+        </div>
+        <!-- Skills & Interests Section-->
+        <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+          <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Skills & Interests</h6>
+          <!--Form item-->
+           <!--Form item-->
+           <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+                <label for="AreaOfExpertise" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Area of Expertise (Check all that apply) </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="Teaching/Mentorship" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Teaching/Mentorship</p>
+                </div>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="CareerCoaching" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Career Coaching</p>
+                </div>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="EventPlanning" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Event Planning</p>
+                </div>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="Fundraising" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Fundraising</p>
+                </div>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="CommunityOutreach" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Community Outreach</p>
+                </div>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="others" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Others</p>
+                </div>
+            </div>
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="volunteerReasons" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Why do you want to volunteer with TalentMakers? </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <textarea name="volunteerReasons" required rows="4" placeholder="Briefly explain your motivation and what you hope to contribute..." class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7"></textarea>
+          </div>
+        </div>
+        <div class="flex items-center justify-start gap-[10px] w-full">
+          <input required type="checkbox" class="custom-checkbox">
+          <p class="text-gray-900 text-sm font-normal leading-tight">I agree to the <span class="text-priColor"><a href="">terms and conditions</a></span> of volunteering with TalentMakers Foundation.</p>
+        </div>
+        <button class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Register</button>
+      </form>
+    </div>
+  </section>
+
+
+<!--Partners Registration form popup-->
+<section id="partner-form-popup-section" class="p-6 w-full gap-[10px] lg:gap-[20px] hidden flex-col items-center justify-center h-full z-20 bg-black/70 fixed">
+    <div class="p-5 bg-white rounded-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%] h-full">
+      <div class="flex items-center justify-center gap-[20px] w-full">
+        <h2 class="text-gray-900 text-xl lg:text-2xl font-bold leading-normal lg:leading-[44px] w-full text-center">Become a Partner with TalentMakers!</h2>
+        <div id="close-partner-form-popup" class="cursor-pointer"><i class="fa-solid fa-xmark" style="color: #000000;"></i></div>
+      </div>
+      <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Join us to empower underprivileged youth through IT education. Fill out the form to explore partnerships.</p>
+      <!--Registration form-->
+      <form action="" method="post" class="flex flex-col items-start justify-start gap-[20px] w-full h-full overflow-y-scroll">
+        <!--Organization/Individual Info Section-->
+        <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+          <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Organization/Individual Information</h6>
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="fullName" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Full Name (for individual partners) </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <input type="text" placeholder="Enter your full name" name="fullName" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="organizationName" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Organization/Company Name (for corporate partners)  </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <input type="text" placeholder="Enter organization name" name="organizationName" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="websiteURL" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Website (if applicable) </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <input type="url" placeholder="Enter website URL" name="websiteURL" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="email" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Email address </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <input type="email" placeholder="Enter your email address" name="email" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="phoneNumber" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Phone number</label>
+            <input type="tel" placeholder="Enter your phone number" name="phoneNumber" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="gender" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Gender</label>
+            <select name="gender" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+              <option value="" disabled selected>Select..</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+        </div>
+        <!-- Location Section-->
+        <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+          <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Location</h6>
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="CityRegion" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">City/Region </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <input type="text" placeholder="Enter your city or region" name="CityRegion" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="country" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Country </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <select name="country" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+              <option class="text-base lg:text-lg font-normal" value="" disabled selected>Select..</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Åland Islands">Åland Islands</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="American Samoa">American Samoa</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Anguilla">Anguilla</option>
+              <option value="Antarctica">Antarctica</option>
+              <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armenia">Armenia</option>
+              <option value="Aruba">Aruba</option>
+              <option value="Australia">Australia</option>
+              <option value="Austria">Austria</option>
+              <option value="Azerbaijan">Azerbaijan</option>
+              <option value="Bahamas">Bahamas</option>
+              <option value="Bahrain">Bahrain</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Barbados">Barbados</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Belize">Belize</option>
+              <option value="Benin">Benin</option>
+              <option value="Bermuda">Bermuda</option>
+              <option value="Bhutan">Bhutan</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+              <option value="Botswana">Botswana</option>
+              <option value="Bouvet Island">Bouvet Island</option>
+              <option value="Brazil">Brazil</option>
+              <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+              <option value="Brunei Darussalam">Brunei Darussalam</option>
+              <option value="Bulgaria">Bulgaria</option>
+              <option value="Burkina Faso">Burkina Faso</option>
+              <option value="Burundi">Burundi</option>
+              <option value="Cambodia">Cambodia</option>
+              <option value="Cameroon">Cameroon</option>
+              <option value="Canada">Canada</option>
+              <option value="Cape Verde">Cape Verde</option>
+              <option value="Cayman Islands">Cayman Islands</option>
+              <option value="Central African Republic">Central African Republic</option>
+              <option value="Chad">Chad</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Christmas Island">Christmas Island</option>
+              <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Comoros">Comoros</option>
+              <option value="Congo">Congo</option>
+              <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+              <option value="Cook Islands">Cook Islands</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Cote D'ivoire">Cote D'ivoire</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Cyprus">Cyprus</option>
+              <option value="Czech Republic">Czech Republic</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Djibouti">Djibouti</option>
+              <option value="Dominica">Dominica</option>
+              <option value="Dominican Republic">Dominican Republic</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Egypt">Egypt</option>
+              <option value="El Salvador">El Salvador</option>
+              <option value="Equatorial Guinea">Equatorial Guinea</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Estonia">Estonia</option>
+              <option value="Ethiopia">Ethiopia</option>
+              <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+              <option value="Faroe Islands">Faroe Islands</option>
+              <option value="Fiji">Fiji</option>
+              <option value="Finland">Finland</option>
+              <option value="France">France</option>
+              <option value="French Guiana">French Guiana</option>
+              <option value="French Polynesia">French Polynesia</option>
+              <option value="French Southern Territories">French Southern Territories</option>
+              <option value="Gabon">Gabon</option>
+              <option value="Gambia">Gambia</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Germany">Germany</option>
+              <option value="Ghana">Ghana</option>
+              <option value="Gibraltar">Gibraltar</option>
+              <option value="Greece">Greece</option>
+              <option value="Greenland">Greenland</option>
+              <option value="Grenada">Grenada</option>
+              <option value="Guadeloupe">Guadeloupe</option>
+              <option value="Guam">Guam</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Guernsey">Guernsey</option>
+              <option value="Guinea">Guinea</option>
+              <option value="Guinea-bissau">Guinea-bissau</option>
+              <option value="Guyana">Guyana</option>
+              <option value="Haiti">Haiti</option>
+              <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+              <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+              <option value="Honduras">Honduras</option>
+              <option value="Hong Kong">Hong Kong</option>
+              <option value="Hungary">Hungary</option>
+              <option value="Iceland">Iceland</option>
+              <option value="India">India</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+              <option value="Iraq">Iraq</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Isle of Man">Isle of Man</option>
+              <option value="Israel">Israel</option>
+              <option value="Italy">Italy</option>
+              <option value="Jamaica">Jamaica</option>
+              <option value="Japan">Japan</option>
+              <option value="Jersey">Jersey</option>
+              <option value="Jordan">Jordan</option>
+              <option value="Kazakhstan">Kazakhstan</option>
+              <option value="Kenya">Kenya</option>
+              <option value="Kiribati">Kiribati</option>
+              <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+              <option value="Korea, Republic of">Korea, Republic of</option>
+              <option value="Kuwait">Kuwait</option>
+              <option value="Kyrgyzstan">Kyrgyzstan</option>
+              <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+              <option value="Latvia">Latvia</option>
+              <option value="Lebanon">Lebanon</option>
+              <option value="Lesotho">Lesotho</option>
+              <option value="Liberia">Liberia</option>
+              <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+              <option value="Liechtenstein">Liechtenstein</option>
+              <option value="Lithuania">Lithuania</option>
+              <option value="Luxembourg">Luxembourg</option>
+              <option value="Macao">Macao</option>
+              <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+              <option value="Madagascar">Madagascar</option>
+              <option value="Malawi">Malawi</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Maldives">Maldives</option>
+              <option value="Mali">Mali</option>
+              <option value="Malta">Malta</option>
+              <option value="Marshall Islands">Marshall Islands</option>
+              <option value="Martinique">Martinique</option>
+              <option value="Mauritania">Mauritania</option>
+              <option value="Mauritius">Mauritius</option>
+              <option value="Mayotte">Mayotte</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+              <option value="Moldova, Republic of">Moldova, Republic of</option>
+              <option value="Monaco">Monaco</option>
+              <option value="Mongolia">Mongolia</option>
+              <option value="Montenegro">Montenegro</option>
+              <option value="Montserrat">Montserrat</option>
+              <option value="Morocco">Morocco</option>
+              <option value="Mozambique">Mozambique</option>
+              <option value="Myanmar">Myanmar</option>
+              <option value="Namibia">Namibia</option>
+              <option value="Nauru">Nauru</option>
+              <option value="Nepal">Nepal</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="Netherlands Antilles">Netherlands Antilles</option>
+              <option value="New Caledonia">New Caledonia</option>
+              <option value="New Zealand">New Zealand</option>
+              <option value="Nicaragua">Nicaragua</option>
+              <option value="Niger">Niger</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="Niue">Niue</option>
+              <option value="Norfolk Island">Norfolk Island</option>
+              <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+              <option value="Norway">Norway</option>
+              <option value="Oman">Oman</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Palau">Palau</option>
+              <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+              <option value="Panama">Panama</option>
+              <option value="Papua New Guinea">Papua New Guinea</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Peru">Peru</option>
+              <option value="Philippines">Philippines</option>
+              <option value="Pitcairn">Pitcairn</option>
+              <option value="Poland">Poland</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Puerto Rico">Puerto Rico</option>
+              <option value="Qatar">Qatar</option>
+              <option value="Reunion">Reunion</option>
+              <option value="Romania">Romania</option>
+              <option value="Russian Federation">Russian Federation</option>
+              <option value="Rwanda">Rwanda</option>
+              <option value="Saint Helena">Saint Helena</option>
+              <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+              <option value="Saint Lucia">Saint Lucia</option>
+              <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+              <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+              <option value="Samoa">Samoa</option>
+              <option value="San Marino">San Marino</option>
+              <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+              <option value="Saudi Arabia">Saudi Arabia</option>
+              <option value="Senegal">Senegal</option>
+              <option value="Serbia">Serbia</option>
+              <option value="Seychelles">Seychelles</option>
+              <option value="Sierra Leone">Sierra Leone</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Slovakia">Slovakia</option>
+              <option value="Slovenia">Slovenia</option>
+              <option value="Solomon Islands">Solomon Islands</option>
+              <option value="Somalia">Somalia</option>
+              <option value="South Africa">South Africa</option>
+              <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+              <option value="Spain">Spain</option>
+              <option value="Sri Lanka">Sri Lanka</option>
+              <option value="Sudan">Sudan</option>
+              <option value="Suriname">Suriname</option>
+              <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+              <option value="Swaziland">Swaziland</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+              <option value="Taiwan">Taiwan</option>
+              <option value="Tajikistan">Tajikistan</option>
+              <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Timor-leste">Timor-leste</option>
+              <option value="Togo">Togo</option>
+              <option value="Tokelau">Tokelau</option>
+              <option value="Tonga">Tonga</option>
+              <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+              <option value="Tunisia">Tunisia</option>
+              <option value="Turkey">Turkey</option>
+              <option value="Turkmenistan">Turkmenistan</option>
+              <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+              <option value="Tuvalu">Tuvalu</option>
+              <option value="Uganda">Uganda</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="United Arab Emirates">United Arab Emirates</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+              <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Uzbekistan">Uzbekistan</option>
+              <option value="Vanuatu">Vanuatu</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Viet Nam">Viet Nam</option>
+              <option value="Virgin Islands, British">Virgin Islands, British</option>
+              <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+              <option value="Wallis and Futuna">Wallis and Futuna</option>
+              <option value="Western Sahara">Western Sahara</option>
+              <option value="Yemen">Yemen</option>
+              <option value="Zambia">Zambia</option>
+              <option value="Zimbabwe">Zimbabwe</option>
+            </select>
+          </div>
+        </div>
+        <!-- Partnership Interests Section-->
+        <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+          <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Partnership Interests</h6>
+          <!--Form item-->
+           <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+                <label for="howToPartner" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">How would you like to partner with us?</span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="sponsoringProgram" value="Sponsoring a program or cohort" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Sponsoring a program or cohort</p>
+                </div>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="providingMentorship" value="Providing mentorship & training" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Providing mentorship & training</p>
+                </div>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="offeringJob" value="Offering job/internship placements" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Offering job/internship placements</p>
+                </div>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="Fundraising" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Fundraising</p>
+                </div>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="donatingResources" value="Donating resources (e.g., laptops, software)" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Donating resources (e.g., laptops, software)</p>
+                </div>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="hostingEvents" value="Hosting events or hackathons" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Hosting events or hackathons</p>
+                </div>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="supportingFundrising" value="Supporting fundraising campaigns" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Supporting fundraising campaigns</p>
+                </div>
+                <div class="flex items-center justify-start gap-[10px] w-full">
+                    <input type="checkbox" name="others" value="others" class="custom-checkbox">
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Others</p>
+                </div>
+            </div>
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="volunteerReasons" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Briefly describe your partnership goals? </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <textarea name="volunteerReasons" required rows="4" placeholder="Tell us how you would like to contribute to TalentMakers’ mission..." class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7"></textarea>
+          </div>
+        </div>
+        <div class="flex items-center justify-start gap-[10px] w-full">
+          <input type="checkbox" required class="custom-checkbox">
+          <p class="text-gray-900 text-sm font-normal leading-tight">I confirm that the information provided is accurate and agree to be contacted by TalentMakers Foundation regarding this partnership opportunity.</p>
+        </div>
+        <button class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Submit partnership request</button>
+      </form>
+    </div>
+  </section>
+
+<!--Header and Nav Bar-->
+<section class="w-full mx-auto">
+    <div id="" class="w-full flex items-center bg-white px-[1.3rem] lg:px-[50px] py-5 shadow-md justify-between">
+      <a href="./index.html"><img class="w-[120px] lg:w-[170px]" src="images/TalentMakers Logosvg.svg" alt=""></a>
+        <ul id="nav-links" class="hidden lg:flex justify-start items-center gap-10">
+          <a href="./index.html"><li class="text-greyColor text-lg font-medium">Home</li></a>
+          <a href="./programs.html"><li class="text-greyColor text-lg font-medium">Programs</li></a>
+          <a href=""><li class="text-greyColor text-lg font-medium">Events</li></a>
+          <a href=""><li class="text-greyColor text-lg font-medium">About us</li></a>
+          <a href=""><li class="text-greyColor text-lg font-medium">Contact us</li></a>
+          <a href=""><li class="text-greyColor text-lg font-medium">Blog</li></a>
+        </ul>
+        <div id="menu-btn" class="lg:hidden"><i class="fa-solid fa-bars" style="color: #000000;"></i></div>
+        <a href=""class="hidden lg:flex px-5 py-2.5 bg-priColor text-white text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Get involved</a>
+    </div>
+    <div class="hidden w-[291px] h-[291px] bg-[#ffd700] rounded-full absolute mb-10"></div>
+</section>
+
+ <!--Mobile Menu popup-->
+ <section id="mobileMenu" class="w-full gap-[10px] lg:gap-[20px] hidden lg:hidden flex-col items-center justify-center z-20 shadow-xl absolute duration-100 transition-transform">
+  <div class="p-5 bg-white rounded-b-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%] h-full">
+    <div id="" class="flex flex-col items-center justify-center gap-10">
+        <ul id="" class="flex flex-col justify-start items-center gap-10">
+          <a href="./index.html"><li class="text-gray-950 text-lg font-medium">Home</li></a>
+          <a href="./programs.html"><li class="text-gray-950 text-lg font-medium">Programs</li></a>
+          <a href=""><li class="text-gray-950 text-lg font-medium">Events</li></a>
+          <a href=""><li class="text-gray-950 text-lg font-medium">About us</li></a>
+          <a href=""><li class="text-gray-950 text-lg font-medium">Contact us</li></a>
+          <a href=""><li class="text-gray-950 text-lg font-medium">Blog</li></a>
+        </ul>
+        <a href=""class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5 w-full">Get involved</a>
+    </div>
+  </section>
+
+
+<!--Header Section-->
+<section id="" class="lg:max-w-5xl px-6 lg:px-0 w-full flex flex-col mx-auto mt-[80px] lg:mt-[80px] mb-[40px] justify-center items-center gap-[40px] lg:gap-[40px]">
+  <div class="flex flex-col items-center justify-center gap-[20px] w-full lg:w-[754px]">
+    <h2 class="text-center text-gray-900 text-2xl lg:text-5xl font-bold leading-[30px] lg:leading-[64px]">Join Us in Empowering Lives Through Technology</h2>
+    <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Your involvement can make a lasting impact. Whether you volunteer, partner, or donate, you’re helping us create a brighter future for Africa’s youth.</p>
+  </div>
+  <img src="images/getInvolved/getInvolvedHero.png" alt="">
+  </section>
+
+<!--Ways to get involved Section-->
+<section id="transform-lives-section" class="lg:max-w-[85rem] px-6 lg:px-0 w-full flex flex-col mx-auto mt-[80px] lg:mt-[150px] justify-between items-center gap-[40px] lg:gap-[80px]">
+    <h2 class="text-gray-900 text-xl lg:text-[36px] font-bold leading-normal lg:leading-[44px]">Ways to Get Involved</h2>
+    <div class="flex flex-col lg:flex-row items-center justify-between w-full gap-[40px] lg:gap-[80px]">
+        <div class="flex flex-col items-start justify-start gap-[20px] w-full lg:w-1/2">
+            <div class="py-3 lg:py-5 px-8 lg:px-10 rounded-[20px] border border-black justify-center items-center gap-2.5 inline-flex">
+                <h3 class="text-gray-900 text-xl lg:text-5xl font-bold leading-normal lg:leading-[44px]">1</h3>
+            </div>
+          <h2 class="text-gray-900 text-xl lg:text-[36px] font-bold leading-normal lg:leading-[44px]">Volunteer Your Time</h2>
+          <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Become a mentor, trainer, or workshop facilitator and share your expertise with our talented youth. Your guidance can inspire and empower the next generation of tech leaders.</p>
+          <h5 class="text-gray-900 text-base lg:text-lg font-bold leading-tight lg:leading-7">Opportunities Include:</h5>
+          <div class="flex flex-col gap-[10px] justify-start items-start">
+            <div class="flex items-center justify-center gap-[10px]">
+              <img src="images/checkmark.png" alt="" srcset="">
+              <div class="flex flex-col items-start justify-start gap-[10px]">
+                <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Mentoring participants in coding, design, and soft skills.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-[10px]">
+              <img src="images/checkmark.png" alt="" srcset="">
+              <div class="flex flex-col items-start justify-start gap-[10px]">
+                <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Conducting workshops on emerging technologies.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-[10px]">
+              <img src="images/checkmark.png" alt="" srcset="">
+              <div class="flex flex-col items-start justify-start gap-[10px]">
+                <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Supporting community events like hackathons and job fairs.</p>
+              </div>
+            </div>
+          </div>
+          <button id="open-volunteer-form-popup" class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Become a volunteer</button>
+        </div>
+        <img class="w-full lg:w-1/2 lg:h-[340px] rounded-[10px]" src="images/getInvolved/volunteer.png" />
+    </div>
+    <div class="flex flex-col-reverse lg:flex-row items-center justify-between w-full gap-[40px] lg:gap-[80px]">
+        <img class="w-full lg:w-1/2 lg:h-[407px] rounded-[10px]" src="images/getInvolved/partner.png" />
+        <div class="flex flex-col items-start justify-start gap-[20px] w-full lg:w-1/2">
+            <div class="py-3 lg:py-5 px-8 lg:px-10 rounded-[20px] border border-black justify-center items-center gap-2.5 inline-flex">
+                <h3 class="text-gray-900 text-xl lg:text-5xl font-bold leading-normal lg:leading-[44px]">2</h3>
+            </div>
+          <h2 class="text-gray-900 text-xl lg:text-[36px] font-bold leading-normal lg:leading-[44px]">Partner with Us</h2>
+          <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Collaborate with us to provide resources, curriculum support, and job opportunities for our graduates. Together, we can drive innovation and create sustainable employment pathways.</p>
+          <h5 class="text-gray-900 text-base lg:text-lg font-bold leading-tight lg:leading-7">Ways to Partner:</h5>
+          <div class="flex flex-col gap-[10px] justify-start items-start">
+            <div class="flex items-center justify-center gap-[10px]">
+              <img src="images/checkmark.png" alt="" srcset="">
+              <div class="flex flex-col items-start justify-start gap-[10px]">
+                <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Offer internships and job placements for program graduates.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-[10px]">
+              <img src="images/checkmark.png" alt="" srcset="">
+              <div class="flex flex-col items-start justify-start gap-[10px]">
+                <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Sponsor a training cohort or specific program..</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-[10px]">
+              <img src="images/checkmark.png" alt="" srcset="">
+              <div class="flex flex-col items-start justify-start gap-[10px]">
+                <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Share expertise through joint projects and collaborations.</p>
+              </div>
+            </div>
+          </div>
+          <button id="open-partner-form-popup" class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Become a partner</button>
+        </div>
+    </div>
+    <div class="flex flex-col lg:flex-row items-center justify-between w-full gap-[40px] lg:gap-[80px]">
+        <div class="flex flex-col items-start justify-start gap-[20px] w-full lg:w-1/2">
+            <div class="py-3 lg:py-5 px-8 lg:px-10 rounded-[20px] border border-black justify-center items-center gap-2.5 inline-flex">
+                <h3 class="text-gray-900 text-xl lg:text-5xl font-bold leading-normal lg:leading-[44px]">3</h3>
+            </div>
+          <h2 class="text-gray-900 text-xl lg:text-[36px] font-bold leading-normal lg:leading-[44px]">Donate to Support Our Mission</h2>
+          <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Your financial contributions directly impact our ability to provide cutting-edge education, resources, and opportunities for youth in need. Every donation fuels change and drives transformation.</p>
+          <h5 class="text-gray-900 text-base lg:text-lg font-bold leading-tight lg:leading-7">What Your Donation Supports:</h5>
+          <div class="flex flex-col gap-[10px] justify-start items-start">
+            <div class="flex items-center justify-center gap-[10px]">
+              <img src="images/checkmark.png" alt="" srcset="">
+              <div class="flex flex-col items-start justify-start gap-[10px]">
+                <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Scholarships for participants.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-[10px]">
+              <img src="images/checkmark.png" alt="" srcset="">
+              <div class="flex flex-col items-start justify-start gap-[10px]">
+                <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Resources like laptops and internet access.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-[10px]">
+              <img src="images/checkmark.png" alt="" srcset="">
+              <div class="flex flex-col items-start justify-start gap-[10px]">
+                <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">The chance to give back by mentoring others.</p>
+              </div>
+            </div>
+          </div>
+          <a href="donation.html" class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Donate now</a>
+        </div>
+        <img class="w-full lg:w-1/2 lg:h-[340px] rounded-[10px]" src="images/getInvolved/donate.png"/>
+    </div>
+
+  </section>
+
+
+
+     <!--Footer Section-->
+   <footer id="footer-section" class="px-[1.3rem] lg:px-[50px] py-[1.3rem] lg:py-[50px] bg-lightBg w-full flex flex-col mx-auto mt-[80px] lg:mt-[150px] justify-between items-center gap-[20px] lg:gap-[40px]">
+      <div class="w-full flex flex-col lg:flex-row mx-auto justify-between items-start gap-[20px] lg:gap-[80px]">
+      <div class="flex flex-col items-start justify-start gap-[20px] w-full">
+        <img class="w-[120px] lg:w-[170px]" src="images/TalentMakers Logosvg.svg" alt="">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7 w-full">TalentMakers Foundation transforms lives through IT education, employment, and innovation. Join us to create lasting impact.</p>
+        <div class="flex gap-2">
+          <img src="images/mail.svg" alt="">
+          <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">info@talentmakersfoundation.org</p>
+        </div>
+      </div>
+      <div class="flex items-start justify-start gap-[20px] w-full">
+        <ul class="flex flex-col items-start justify-start gap-[20px] w-full">
+          <li class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Quick Links</li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href="">About us</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href="">Programs</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href="">Events</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href="">Blog</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href="">Contact us</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href="">Privacy Policy</a></li>
+        </ul>
+        <ul class="flex flex-col items-start justify-start gap-[20px] w-full">
+          <li class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Social Media</li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href=""><i class="fa-brands fa-facebook" style="color: #111827;"></i> Facebook</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href=""><i class="fa-brands fa-x-twitter" style="color: #111827;"></i> Twitter</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href=""><i class="fa-brands fa-linkedin" style="color: #111827;"></i> LinkedIn</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href=""><i class="fa-brands fa-instagram" style="color: #111827;"></i> Instagram</a></li>
+          <li class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7"><a href=""><i class="fa-brands fa-youtube" style="color: #111827;"></i> Youtube</a></li>
+        </ul>
+    </div>
+    <div class="flex flex-col items-start justify-start gap-[20px] w-full">
+      <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Get connected</p>
+      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Get updates on our latest programs, success stories, and events. Subscribe to our newsletter today!</p>
+      <form action="" class="flex items-center justify-between w-full gap-[20px]">
+        <input type="text" placeholder="Enter your email address" class="self-stretch p-2.5 rounded-[5px] bg-transparent w-full border border-gray-900 justify-start items-center gap-2.5 flex">
+        <button class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Subscribe</button>
+      </form>
+      <div class="flex items-center justify-start gap-[10px]">
+        <input type="checkbox" class="custom-checkbox" checked>
+        <p class="text-gray-900 text-sm font-normal leading-tight">By subscribing, you agree to our Privacy Policy and consent to receive updates from us.</p>
+      </div>
+    </div>
+    </div>
+    <div class="py-2.5 border-t border-[#e0e1e2] justify-center items-center text-center inline-flex w-full">
+      <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight">All rights reserved. © 2024 TalentMakers Foundation.</p>
+    </div>
+    </footer>
+
+</body>
+</html>

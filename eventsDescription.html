@@ -41,8 +41,8 @@
         <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Personal Information</h6>
         <!--Form item-->
         <div class="flex flex-col gap-[10px] items-start justify-start w-full">
-          <label for="firstName" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Full Name </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
-          <input type="text" placeholder="Enter your first name" name="firstName" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          <label for="fullName" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Full Name </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+          <input type="text" placeholder="Enter your full name" name="fullName" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
         </div>
         <div class="flex flex-col gap-[10px] items-start justify-start w-full">
           <label for="email" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Email address </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
@@ -340,10 +340,10 @@
         <textarea name="specialNeeds" rows="4" placeholder="Enter your message here..." class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7"></textarea>
       </div>
       <div class="flex items-center justify-start gap-[10px] w-full">
-        <input type="checkbox" class="custom-checkbox" checked>
+        <input type="checkbox" required class="custom-checkbox">
         <p class="text-gray-900 text-sm font-normal leading-tight">I agree to the event’s terms and conditions and consent to the use of my details for event-related communication.</p>
       </div>
-      <button class="w-full lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Register</button>
+      <button class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Register</button>
     </form>
   </div>
 </section>
