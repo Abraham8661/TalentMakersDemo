@@ -38,7 +38,7 @@
   outline: none;
 }
 
-/* Reset button styles specifically */
+/* Reset button styles specifically
 button {
   all: unset;
   background: none;
@@ -47,6 +47,7 @@ button {
   font-size: inherit;
   padding: inherit;
 }
+*/
 
 /* Reset other elements 
 input,
