@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/trial.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/106c35bf5a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/moment/min/moment.min.js"
+      defer
+    ></script>
+
+  </head>
+  <body class="bg-[#F4F4F4]">
+    <!--Header and Nav Bar-->
+    <section class="w-full mx-auto">
+      <div
+        id="nav-bar"
+        class="w-full flex items-center bg-white px-[1.3rem] lg:px-[50px] py-5 shadow-md justify-center"
+      >
+        <a href="index.html"
+          ><img
+            class="w-[120px] lg:w-[170px]"
+            src="images/TalentMakers Logosvg.svg"
+            alt=""
+        /></a>
+      </div>
+    </section>
+
+<!--Signup section-->
+<section class="p-6 w-full gap-[10px] lg:gap-[20px] flex flex-col items-center justify-center mt-[40px]">
+    <div class="p-5 lg:p-10 bg-white rounded-[20px] flex-col justify-center items-center gap-5 inline-flex w-full lg:w-[45%]">
+        <h2 class="text-gray-900 text-xl lg:text-[36px] font-bold leading-normal lg:leading-[44px] text-center">Join TalentMakers Today!</h2>
+      <p class="text-greyColor text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Empower your future with top IT education and career opportunities. Join our thriving tech community today!</p>
+      <!--Registration form-->
+      <form action="" method="post" class="flex flex-col items-center justify-center gap-[20px] w-full">
+        <div class="flex flex-col items-start justify-start gap-[10px] lg:gap-[20px] w-full">
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="fullName" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Full Name </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <input type="text" placeholder="Enter your full name" name="fullName" required id="" class="w-full p-2.5 rounded-[5px] border border-outlineCol justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="email" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Email address </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+            <input type="email" placeholder="Enter your email address" name="email" required id="" class="w-full p-2.5 rounded-[5px] border border-outlineCol justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <!--Form item-->
+          <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+            <label for="phone" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Phone number</label>
+            <input type="tel" placeholder="Enter your phone number" name="phoneNumber" id="" class="w-full p-2.5 rounded-[5px] border border-outlineCol justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+          </div>
+          <!--Form item-->
+          <div class="w-full gap-2.5 lg:gap-5 flex flex-col lg:flex-row items-center justify-between">
+            <div class="flex flex-col gap-[10px] items-start justify-start w-full lg:w-1/2">
+                <label for="password1" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Password</label>
+                <input type="password" placeholder="Enter your password" name="password1" id="" class="w-full p-2.5 rounded-[5px] border border-outlineCol justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+            </div>
+            <div class="flex flex-col gap-[10px] items-start justify-start w-full lg:w-1/2">
+                <label for="password2" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Confirm password</label>
+                <input type="password" placeholder="Confirm your password" name="password2" id="" class="w-full p-2.5 rounded-[5px] border border-outlineCol justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex items-center justify-start gap-[10px] w-full">
+          <input required type="checkbox" class="custom-checkbox">
+          <p class="text-gray-900 text-sm font-normal leading-tight">By creating an account, you agree to our <span class="text-priColor"><a href="">Terms of Service</a></span> and and have read our <span class="text-priColor"><a href="">Privacy Policy</a></span></p>
+        </div>
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7 text-center">Already registered? Log In <span class="text-priColor"><a href="login.html">here</a></span></p>
+        <button class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5 w-full">Sign up</button>
+      </form>
+    </div>
+  </section>
+
+  </body>
+</html>

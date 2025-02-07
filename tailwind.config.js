@@ -10,6 +10,7 @@ module.exports = {
         yellColor: "#ffd700",
         textColor: "#111827",
         lightBg: "#f2edf5",
+        outlineCol: "#D0D2D4",
       },
       backgroundImage: {
         getInvolvedImageDesktop: "url('images/getInvolved_Desktop.png')",
