@@ -35,16 +35,16 @@
       src="https://cdn.jsdelivr.net/npm/moment/min/moment.min.js"
       defer
     ></script>
-    <script src="Scripts/events.js" defer></script>
+    <script src="Scripts/eventVerify.js" defer></script>
   </head>
   <body class="bg-[#F4F4F4]">
     <!--Header and Nav Bar-->
     <section class="w-full mx-auto">
       <div
         id="nav-bar"
-        class="w-full flex items-center bg-white px-[1.3rem] lg:px-[50px] py-5 shadow-md justify-center"
+        class="w-full flex items-center bg-white px-[1.3rem] lg:px-[50px] py-2.5 shadow-md justify-center"
       >
-        <a href="#"
+        <a href="index.html"
           ><img
             class="w-[120px] lg:w-[170px]"
             src="images/TalentMakers Logosvg.svg"
@@ -64,18 +64,20 @@
           <!--Form item-->
             <input type="text" placeholder="" maxlength="6" name="verifyEmail" required id="" class="w-full p-5 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-xl lg:text-[36px] font-normal leading-tight lg:leading-7">
         </div>
-        <div class="flex items-center justify-center gap-[5px]">
-          <img src="images/timerClock.svg" alt="">
-          <p class="text-priColor text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Expires in</p>
-          <p class="text-priColor text-base lg:text-lg font-medium text-center leading-tight lg:leading-7">01:50</p>
-        </div>
         <button class="flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5 w-full">Verify</button>
       </form>
       <!--Resend otp form-->
-      <form action="" method="post" class="flex flex-col items-center justify-center gap-[20px] w-full">
-        <div class="flex flex-col items-start justify-start gap-[10px] lg:gap-[20px] w-full">
+      <form action="" method="post" class="flex-col items-center justify-center gap-[20px] w-full">
+        <div class="flex flex-col items-center justify-center gap-[10px] lg:gap-[20px] w-full">
+          <!--Timer-->
+          <div id="timeSection" class="flex items-center justify-center gap-[5px]">
+            <img src="images/timerClock.svg" alt="">
+            <p class="text-priColor text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Expires in</p>
+            <p id="timeDisplay" class="text-priColor text-base lg:text-lg font-medium text-center leading-tight lg:leading-7">5:00</p>
+          </div>
           <!--Form item-->
-          <button id="resendOTP" class="hidden text-priColor text-base lg:text-lg font-medium justify-center items-center gap-2.5 w-full">Resend otp</button>
+          <input type="text" name="resendCode" id="" class="hidden">
+          <button id="resendButton" class="hidden text-priColor text-base lg:text-lg font-medium justify-center items-center gap-2.5 w-full">Resend otp</button>
         </div>
       </form>
     </div>
