@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Ticket</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/trial.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://kit.fontawesome.com/106c35bf5a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="a4page" class="w-[210mm] h-[297mm] p-[10mm] bg-white border border-gray-300 shadow-lg flex flex-col justify-center">
+        <!--Event Ticket Section-->
+        <div class="w-full flex flex-col items-center justify-between p-2.5 md:p-5 bg-lightBg gap-5">
+            <!--Event image-->
+            <img class="w-full object-cover h-[361px] rounded-[5px]" src="images/web_dev image.png" alt="">
+            <!--Event details-->
+            <div class="flex flex-col justify-between items-start gap-5 w-full">
+                <div class="p-2.5 bg-priColor rounded-[5px] justify-center items-center gap-2.5 flex">
+                    <div class="text-white text-center text-[20px] font-semibold">EVENT TICKET</div>
+                </div>
+                <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-5 flex w-full">
+                    <div class="flex flex-col items-start justify-start gap-[10px]">
+                        <h6 class="text-gray-900 text-2xl font-bold leading-tight md:leading-loose">Youth Empowerment Hackathon 2025</h6>
+                        <p class="text-gray-900 text-lg font-normal text-left leading-tight lg:leading-7">Collaborate, Innovate, Empower: Be Part of the Change!</p>
+                        <div class="flex gap-2 items-center justify-start w-full">
+                            <i class="fa-regular fa-calendar" style="color: #000000;"></i>
+                          <p class="text-gray-900 text-lg font-normal text-center leading-tight lg:leading-7">February 20 - 22, 2025</p>
+                        </div>
+                        <div class="flex gap-2 items-center justify-start w-full">
+                            <i class="fa-regular fa-clock" style="color: #000000;"></i>
+                          <p class="text-gray-900 text-lg font-normal text-center leading-tight lg:leading-7">8AM - 11AM</p>
+                        </div>
+                        <div class="flex gap-2 items-center justify-start w-full">
+                            <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
+                          <p class="text-gray-900 text-lg font-normal text-center leading-tight lg:leading-7">Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--User Info-->
+            <div class="w-full pt-5 border-t border-dashed border-gray-900 justify-between items-center gap-[2px] inline-flex">
+                <div class="p-5 bg-priColor rounded-lg flex-col justify-between items-center gap-2.5 md:gap-5 inline-flex w-full">
+                    <div class="flex-col justify-center items-center gap-2.5 flex w-full">
+                        <img src="images/testimonialImg1.jpg" class="w-[60px] h-[60px] md:w-[108px] md:h-[108px] rounded-full" alt="">
+                        <div class="self-stretch flex-col justify-center items-center gap-2.5 flex">
+                            <p class="text-white text-lg font-bold leading-7">John Doe</p>
+                            <p class="text-white text-lg font-normal leading-7">PARTICIPANT</p>
+                        </div>
+                    </div>
+                    <p class="text-white text-lg font-bold leading-7">TMFE152684412</p>
+                    <div class="p-2.5 bg-white rounded-[10px] justify-center items-center gap-2.5 inline-flex">
+                        <p class="text-gray-950 text-lg font-normal text-center leading-tight lg:leading-7">Youth Empowerment Hackathon 2025</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+
+    <!--Remove this section (including the script section) when implementing the download ticket feature on Django-->
+    <button onclick="downloadPDF()">Download PDF</button>
+
+    <script>
+        async function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+
+            // Select the A4 content
+            const element = document.getElementById('a4page');
+
+            // Convert HTML to canvas
+            const canvas = await html2canvas(element, { scale: 2 });
+            const imgData = canvas.toDataURL('image/png');
+
+            // Create jsPDF instance (A4 size: 210 x 297 mm)
+            const pdf = new jsPDF('p', 'mm', 'a4');
+
+            // Calculate dimensions
+            const pdfWidth = 210; // A4 width in mm
+            const pdfHeight = (canvas.height * pdfWidth) / canvas.width; 
+
+            // Add image to PDF
+            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+
+            // Save the PDF
+            pdf.save('A4-Page.pdf');
+        }
+    </script>
+</body>
+</html>

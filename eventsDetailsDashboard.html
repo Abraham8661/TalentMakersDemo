@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youth Empowerment Hackathon 2025</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/trial.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/106c35bf5a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/moment/min/moment.min.js"
+      defer
+    ></script>
+    <script src="Scripts/eventsDetailsDashboard.js" defer></script>
+  </head>
+  <body class="bg-[#F4F4F4]">
+
+    <!--Event feedback form popup-->
+    <section id="event-feedback-form-popup-section" class="p-6 w-full gap-[10px] lg:gap-[20px] hidden flex-col items-center justify-center h-screen top-0 z-50 bg-black/70 fixed">
+      <div class="p-5 bg-white rounded-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%] h-full">
+        <div class="flex items-center justify-center gap-[20px] w-full">
+          <h2 class="text-gray-900 text-xl lg:text-2xl font-bold leading-normal lg:leading-[44px] w-full text-center">Event Feedback</h2>
+          <div id="close-feedback-form-popup" class="cursor-pointer"><i class="fa-solid fa-xmark" style="color: #000000;"></i></div>
+        </div>
+        <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">We value your feedback! Share your experience to help us improve.</p>
+        <!--Event feedback form-->
+        <form action="" method="post" class="flex flex-col items-start justify-start gap-[20px] w-full h-full overflow-y-scroll">
+          <!--Event Information Section-->
+          <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+            <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Event Information</h6>
+            <!--Form item-->
+            <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+              <label for="eventName" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Event Name</label>
+              <input type="text" value="Youth Empowerment Hackathon 2025" disabled name="eventName" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+            </div>
+            <!--Form item-->
+            <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+              <label for="eventDate" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Event Name</label>
+              <input type="date" value="" disabled name="eventDate" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+            </div>
+          </div>
+          <!-- Overall Experience Section-->
+          <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+            <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Overall Experience</h6>
+            <!--Form item-->
+             <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+                <label for="howToPartner" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">How would you rate your overall experience at this event? (1 - Poor, 5 - Excellent)</span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+                <div class="flex items-center justify-start gap-5">
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="poor" value="poor" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">1</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="fair" value="fair" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">2</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="good" value="good" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">3</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="vgood" value="vgood" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">4</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="excellent" value="excellent" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">5</p>
+                  </div>
+                </div>
+              </div>
+            <!--Form item-->
+             <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+                <label for="howToPartner" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Would you recommend this event to a friend or colleague?</span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+                <div class="flex items-center justify-start gap-5">
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="yesRecommend" value="yesRecommend" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Yes</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="noRecommend" value="noRecommend" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">No</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <!-- Detailed Feedback Section-->
+          <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+            <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Detailed Feedback</h6>
+            <!--Form item-->
+            <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+              <label for="whatUsersEnjoyedMore" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">What did you enjoy the most about the event?</label>
+              <textarea name="whatUsersEnjoyedMore" rows="4" placeholder="Enter your comment..." class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7"></textarea>
+            </div>
+            <!--Form item-->
+            <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+              <label for="whatCanBeImproved" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">What could be improved for future events?</label>
+              <textarea name="whatCanBeImproved" rows="4" placeholder="Enter your comment..." class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7"></textarea>
+            </div>
+          </div>
+
+          <!-- Speaker & Content Evaluation Section-->
+          <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+            <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Speaker & Content Evaluation</h6>
+            <!--Form item-->
+             <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+                <label for="howToPartner" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">How would you rate the quality of the speakers/presenters? (1 - Poor, 5 - Excellent)</span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+                <div class="flex items-center justify-start gap-5">
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="poorSpeaker" value="poorSpeaker" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">1</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="fairSpeaker" value="fairSpeaker" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">2</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="goodSpeaker" value="goodSpeaker" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">3</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="vgoodSpeaker" value="vgoodSpeaker" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">4</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="excellentSpeaker" value="excellentSpeaker" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">5</p>
+                  </div>
+                </div>
+              </div>
+            <!--Form item-->
+             <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+                <label for="howToPartner" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Was the event content relevant and useful?</span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+                <div class="flex items-center justify-start gap-5">
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="poorEventContent" value="poorEventContent" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">1</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="fairEventContent" value="fairEventContent" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">2</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="goodEventContent" value="goodEventContent" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">3</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="vgoodEventContent" value="vgoodEventContent" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">4</p>
+                  </div>
+                  <div class="flex items-center justify-start gap-[10px] w-full">
+                      <input type="checkbox" name="excellentEventContent" value="excellentEventContent" class="custom-checkbox">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">5</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <button class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Submit feedback</button>
+        </form>
+      </div>
+    </section>
+
+    <!--Header and Nav Bar-->
+    <section class="w-full mx-auto fixed top-0">
+      <div id="nav-bar" class="w-full flex items-center bg-white px-[1.3rem] lg:px-[50px] py-2.5 shadow-md justify-between">
+        <a href="index.html"><img class="w-[120px] lg:w-[170px]" src="images/TalentMakers Logosvg.svg" alt=""/></a>
+        <div class="hidden md:flex items-center justify-center gap-[5px]">
+          <p id="greeting" class="text-greyColor text-base lg:text-lg font-normal leading-tight lg:leading-7 flex"></p>
+          <p class="text-greyColor text-base lg:text-lg font-normal leading-tight lg:leading-7 flex">John Doe</p>
+        </div>
+        <a href="" class="hidden lg:flex"><img src="images/testimonialImg1.jpg" class="w-[36px] h-[36px] rounded-full" alt=""></a>
+        <div id="menu-btn" class="lg:hidden"><i class="fa-solid fa-bars" style="color: #000000;"></i></div>
+      </div>
+    </section>
+
+     <!--Dashboard Menu popup (Start)-->
+    <section id="mobileMenu" class="w-full gap-[10px] lg:gap-[20px] hidden lg:hidden flex-col items-center justify-center z-20 shadow-xl top-14 absolute duration-100 transition-transform">
+     <div class="p-5 bg-white rounded-b-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%] h-full">
+       <div id="" class="flex flex-col items-start justify-start w-full">
+      <!--Menu link-->
+      <a href="dashboard.html" class="w-full">
+        <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/home.svg" alt="">
+          <p>Dashboard</p>
+        </div>
+      </a>
+      <!--Menu link-->
+      <a href="eventsDashboard.html" class="w-full">
+        <div class="p-5 bg-lightBg hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/events.svg" alt="">
+          <p>Events</p>
+        </div>
+      </a>
+      </a>
+      <!--Menu link-->
+      <a href="" class="w-full">
+        <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/programs.svg" alt="">
+          <p>Programs</p>
+        </div>
+      </a>
+      </a>
+      <!--Menu link-->
+      <a href="" class="w-full">
+        <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/profile.svg" alt="">
+          <p>My profile</p>
+        </div>
+      </a>
+      </a>
+      <!--Menu link-->
+      <a href="" class="w-full">
+        <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/changePassword.svg" alt="">
+          <p>Change password</p>
+        </div>
+      </a>
+      </a>
+      <!--Menu link-->
+      <a href="" class="w-full">
+        <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/Logout.svg" alt="">
+          <p>Logout</p>
+        </div>
+      </a>
+       </div>
+     </section>
+     <!--Dashboard Menu popup (End)-->
+  
+  <!--Dashboard Section-->
+  <section id="" class="lg:max-w-[85rem] px-6 lg:px-0 w-full flex flex-col lg:flex-row mx-auto mt-[100px] md:mt-[100px] mb-[40px] md:mb-[80px] justify-between items-start gap-[40px] lg:gap-[40px]">
+    <!--Menu-->
+    <div class="hidden fixed lg:flex py-5 bg-white rounded-[20px] shadow-md flex-col justify-start items-start w-1/5">
+      <!--Menu link-->
+      <a href="dashboard.html" class="w-full">
+        <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/home.svg" alt="">
+          <p>Dashboard</p>
+        </div>
+      </a>
+      <!--Menu link-->
+      <a href="eventsDashboard.html" class="w-full">
+        <div class="p-5 bg-lightBg hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/events.svg" alt="">
+          <p>Events</p>
+        </div>
+      </a>
+      </a>
+      <!--Menu link-->
+      <a href="" class="w-full">
+        <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/programs.svg" alt="">
+          <p>Programs</p>
+        </div>
+      </a>
+      </a>
+      <!--Menu link-->
+      <a href="" class="w-full">
+        <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/profile.svg" alt="">
+          <p>My profile</p>
+        </div>
+      </a>
+      </a>
+      <!--Menu link-->
+      <a href="" class="w-full">
+        <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/changePassword.svg" alt="">
+          <p>Change password</p>
+        </div>
+      </a>
+      </a>
+      <!--Menu link-->
+      <a href="" class="w-full">
+        <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/Logout.svg" alt="">
+          <p>Logout</p>
+        </div>
+      </a>
+    </div>
+
+    <!--Main Event Dashboard section-->
+    <div id="eventDashboard" class="w-full lg:w-[75%] flex flex-col gap-10 items-start justify-start lg:ml-auto">
+      <div class="pb-5 border-b border-[#d0d2d3] flex-col justify-start items-start gap-2.5 inline-flex w-full">
+        <div class="flex items-center justify-start gap-2.5">
+            <a href="eventsDashboard.html"><i class="fa-solid fa-chevron-left" style="color: #6a0dad;"></i></a>
+            <h2 class="text-gray-900 text-xl lg:text-[24px] font-bold leading-normal lg:leading-[44px]">Youth Empowerment Hackathon 2025</h2>
+        </div>
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">You’re registered for this event! Here are the details.</p>
+      </div>
+      <div class="flex items-center justify-between w-full">
+        <!--Download ticket-->
+        <!--Please Use reportlab or WeasyPrint via Django to generate a PDF from the ticketDownload.html page and serve the PDF dynamically from a Django view.-->
+        <a href="">
+            <div class="justify-between items-center gap-2.5 inline-flex text-priColor text-base lg:text-lg font-medium w-full">
+                <p>Download ticket</p>
+                <img src="images/dashboard/download.svg" alt="">
+            </div>
+        </a>
+        <!--View event details-->
+        <a href="eventsDescription.html">
+            <div class="justify-between items-center gap-2.5 inline-flex text-priColor text-base lg:text-lg font-medium w-full">
+                <p>View event details</p>
+              <i class="fa-solid fa-arrow-right" style="color: #6a0dad;"></i>
+            </div>
+        </a>
+      </div>
+
+      <!--Event Ticket Section-->
+      <div class="w-full flex flex-col md:flex-row items-center justify-between p-2.5 md:p-5 bg-lightBg gap-5">
+        <!--Event image-->
+        <img class="w-full object-cover md:w-1/4 h-[150px] md:h-[361px] rounded-[5px]" src="images/web_dev image.png" alt="">
+        <!--Event details-->
+        <div class="flex flex-col justify-between items-start gap-5 w-full md:w-2/4">
+            <div class="p-2.5 bg-priColor rounded-[5px] justify-center items-center gap-2.5 inline-flex">
+                <div class="text-white text-base md:text-[20px] font-semibold">EVENT TICKET</div>
+            </div>
+            <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-5 flex">
+                <div class="flex flex-col items-start justify-start gap-[10px]">
+                    <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-tight md:leading-loose line-clamp-2">Youth Empowerment Hackathon 2025</h6>
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Collaborate, Innovate, Empower: Be Part of the Change!</p>
+                    <div class="flex gap-2">
+                      <img src="images/calender.svg" alt="">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">February 20 - 22, 2025</p>
+                    </div>
+                    <div class="flex gap-2">
+                      <img src="images/clock.svg" alt="">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">8AM - 11AM</p>
+                    </div>
+                    <div class="flex gap-2">
+                      <img src="images/location-04.svg" alt="">
+                      <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Lagos, Nigeria</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--User Info-->
+        <div class="w-full md:w-1/4 pt-5 md:pt-0 md:pl-5 border-t md:border-t-0 md:border-l border-dashed border-gray-900 justify-between items-center gap-[2px] inline-flex">
+            <div class="p-5 bg-priColor rounded-lg flex-col justify-between items-center gap-2.5 md:gap-5 inline-flex">
+                <div class="flex-col justify-center items-center gap-2.5 flex w-full">
+                    <img src="images/testimonialImg1.jpg" class="w-[60px] h-[60px] md:w-[108px] md:h-[108px] rounded-full" alt="">
+                    <div class="self-stretch flex-col justify-center items-center gap-2.5 flex">
+                        <p class="text-white text-base md:text-lg font-bold leading-7">John Doe</p>
+                        <p class="text-white text-base md:text-lg font-normal leading-7">PARTICIPANT</p>
+                    </div>
+                </div>
+                <p class="text-white text-base md:text-lg font-bold leading-7">TMFE152684412</p>
+                <div class="p-2.5 bg-white rounded-[10px] justify-center items-center gap-2.5 inline-flex">
+                    <p class="text-gray-950 text-base md:text-lg font-normal text-center leading-tight lg:leading-7">Youth Empowerment Hackathon 2025</p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!--Other event info-->
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 w-full">
+        <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col md:flex-row justify-start items-start gap-5 md:gap-10 flex">
+          <!--Event registration date-->
+          <div class="flex flex-col items-start justify-center gap-2">
+            <img src="images/calender.svg" alt="">
+            <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Date Registered</p>
+            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">February 20 - 22, 2025</p>
+          </div>
+          <!--Event status-->
+          <div class="flex flex-col items-start justify-center gap-2">
+            <img src="images/eventStatus.svg" alt="">
+            <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Event Status</p>
+            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Upcoming</p>
+          </div>
+          <!--Countdown-->
+          <div class="flex flex-col items-start justify-center gap-2">
+            <img src="images/hourGlass.svg" alt="">
+            <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Countdown</p>
+            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">5 days left</p>
+          </div>
+        </div>
+        <!--Please use the dtl if tag for this button-->
+        <!--Share event feedback button to be shown if the event.status is == 'Past'-->
+        <button id="showEventFeedbackForm" type="button" class="flex px-5 py-2.5 rounded-[10px] border border-priColor justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose">Share event feedback</button>
+      </div>
+
+    </div>
+  </section>
+  </body>
+</html>
