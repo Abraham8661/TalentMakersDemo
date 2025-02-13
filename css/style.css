@@ -1524,8 +1524,16 @@ input:checked + .toggle-bg {
   height: 291px;
 }
 
+.h-\[297mm\] {
+  height: 297mm;
+}
+
 .h-\[300px\] {
   height: 300px;
+}
+
+.h-\[361px\] {
+  height: 361px;
 }
 
 .h-\[36px\] {
@@ -1550,18 +1558,6 @@ input:checked + .toggle-bg {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[297mm\] {
-  height: 297mm;
-}
-
-.h-\[24px\] {
-  height: 24px;
-}
-
-.h-\[361px\] {
-  height: 361px;
 }
 
 .\!w-12 {
@@ -1612,6 +1608,10 @@ input:checked + .toggle-bg {
   width: 134px;
 }
 
+.w-\[210mm\] {
+  width: 210mm;
+}
+
 .w-\[291px\] {
   width: 291px;
 }
@@ -1635,14 +1635,6 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[210mm\] {
-  width: 210mm;
-}
-
-.w-\[24px\] {
-  width: 24px;
 }
 
 .max-w-\[300px\] {
@@ -1983,11 +1975,6 @@ input:checked + .toggle-bg {
   border-color: rgb(106 13 173 / var(--tw-border-opacity, 1));
 }
 
-.border-\[\#ddd\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(221 221 221 / var(--tw-border-opacity, 1));
-}
-
 .\!bg-gray-50 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1)) !important;
@@ -2133,10 +2120,6 @@ input:checked + .toggle-bg {
   padding: 1.5rem;
 }
 
-.p-\[20mm\] {
-  padding: 20mm;
-}
-
 .p-\[10mm\] {
   padding: 10mm;
 }
@@ -2258,6 +2241,10 @@ input:checked + .toggle-bg {
   font-size: 16px;
 }
 
+.text-\[20px\] {
+  font-size: 20px;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -2276,10 +2263,6 @@ input:checked + .toggle-bg {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-\[20px\] {
-  font-size: 20px;
 }
 
 .font-bold {
@@ -2758,6 +2741,10 @@ input:checked + .toggle-bg {
     height: 108px;
   }
 
+  .md\:h-\[300px\] {
+    height: 300px;
+  }
+
   .md\:h-\[361px\] {
     height: 361px;
   }
@@ -2790,8 +2777,9 @@ input:checked + .toggle-bg {
     width: 49%;
   }
 
-  .md\:w-0 {
-    width: 0px;
+  .md\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .md\:grid-cols-3 {
@@ -2810,12 +2798,12 @@ input:checked + .toggle-bg {
     align-items: center;
   }
 
-  .md\:gap-5 {
-    gap: 1.25rem;
-  }
-
   .md\:gap-10 {
     gap: 2.5rem;
+  }
+
+  .md\:gap-5 {
+    gap: 1.25rem;
   }
 
   .md\:border-l {
@@ -2979,6 +2967,10 @@ input:checked + .toggle-bg {
 
   .lg\:w-\[24\%\] {
     width: 24%;
+  }
+
+  .lg\:w-\[32\%\] {
+    width: 32%;
   }
 
   .lg\:w-\[397px\] {

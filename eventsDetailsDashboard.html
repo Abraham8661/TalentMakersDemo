@@ -313,8 +313,6 @@
         <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">You’re registered for this event! Here are the details.</p>
       </div>
       <div class="flex items-center justify-between w-full">
-        <!--Download ticket-->
-        <!--Please Use reportlab or WeasyPrint via Django to generate a PDF from the ticketDownload.html page and serve the PDF dynamically from a Django view.-->
         <a href="">
             <div class="justify-between items-center gap-2.5 inline-flex text-priColor text-base lg:text-lg font-medium w-full">
                 <p>Download ticket</p>
@@ -331,6 +329,8 @@
       </div>
 
       <!--Event Ticket Section-->
+        <!--Download ticket-->
+        <!--Please Use reportlab or WeasyPrint via Django to generate a PDF from the ticketDownload.html page and serve the PDF dynamically from a Django view.-->
       <div class="w-full flex flex-col md:flex-row items-center justify-between p-2.5 md:p-5 bg-lightBg gap-5">
         <!--Event image-->
         <img class="w-full object-cover md:w-1/4 h-[150px] md:h-[361px] rounded-[5px]" src="images/web_dev image.png" alt="">
@@ -378,7 +378,7 @@
 
       <!--Other event info-->
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 w-full">
-        <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col md:flex-row justify-start items-start gap-5 md:gap-10 flex">
+        <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col md:flex-row justify-start items-start gap-5 md:gap-10 flex w-full md:w-fit">
           <!--Event registration date-->
           <div class="flex flex-col items-start justify-center gap-2">
             <img src="images/calender.svg" alt="">
