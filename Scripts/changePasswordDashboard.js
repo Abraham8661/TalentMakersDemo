@@ -30,6 +30,7 @@ menuBtn.addEventListener("click", () => {
   showMenu();
 });
 
+
 //Logout popup                                                                                                                                                                                                                                                                                              form popup
 const logoutSection = document.getElementById("logout-popup-section");
 const openLogoutBtn = document.getElementById("open-logout-popup");
@@ -53,32 +54,3 @@ closeLogoutBtn.addEventListener("click", () => {
 closeLogoutBtn2.addEventListener("click", () => {
   logout();
 });
-
-
-//Tabs switch
-
-function showEvents() {
-  const eventsSection = document.getElementById("eventDashboard");
-  const upcomingTab = eventsSection.querySelectorAll('.upcoming');
-  const pastTab = eventsSection.querySelectorAll('.past');
-  const upcomingEvents = document.getElementById("upcomingSection");
-  const pastEvents = document.getElementById("pastSection");
-  upcomingTab.forEach((tab)=>{
-    tab.addEventListener("click", ()=>{
-      upcomingEvents.classList.remove("hidden");
-      upcomingEvents.classList.add("flex");
-      pastEvents.classList.remove("flex");
-      pastEvents.classList.add("hidden");
-    })
-  })
-  pastTab.forEach((tab)=>{
-    tab.addEventListener("click", ()=>{
-      pastEvents.classList.remove("hidden");
-      pastEvents.classList.add("flex");
-      upcomingEvents.classList.remove("flex");
-      upcomingEvents.classList.add("hidden");
-    })
-  })
-}
-
-showEvents()

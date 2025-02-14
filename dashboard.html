@@ -39,6 +39,23 @@
   </head>
   <body class="bg-[#F4F4F4]">
 
+       <!--Logout popup-->
+       <section id="logout-popup-section" class="p-6 w-full gap-[10px] lg:gap-[20px] hidden flex-col items-center justify-center h-screen top-0 z-50 bg-black/70 fixed">
+        <div class="p-5 bg-white rounded-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%]">
+          <div class="flex items-center justify-center gap-[20px] w-full">
+            <h2 class="text-gray-900 text-xl lg:text-2xl font-bold leading-normal lg:leading-[44px] w-full text-center">Ready to Log Out?</h2>
+            <div id="close-logout-popup" class="cursor-pointer"><i class="fa-solid fa-xmark" style="color: #000000;"></i></div>
+          </div>
+          <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">You’ll be signed out of your account and redirected to the homepage. You can log back in anytime.</p>
+          <img src="images/logoutUsers.svg" class="h-[70px] w-[70px] md:h-[146px] md:w-[146px]" alt="">
+          <div class="flex w-full items-center justify-between gap-5">
+            <!--Insert logout url here-->
+            <a href="" class="w-1/2 lg:flex px-5 py-2.5 bg-priColor text-center text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Logout</a>
+            <button id="cancel-logout-popup" type="button" class="w-1/2 lg:flex px-5 py-2.5 bg-transparent border border-priColor text-priColor text-[16px] lg:text-xl font-medium rounded-[10px] justify-center items-center gap-2.5">Cancel</button>
+          </div>
+        </div>
+      </section>
+
     <!--Header and Nav Bar-->
     <section class="w-full mx-auto fixed top-0">
       <div id="nav-bar" class="w-full flex items-center bg-white px-[1.3rem] lg:px-[50px] py-2.5 shadow-md justify-between">
@@ -47,7 +64,7 @@
           <p id="greeting" class="text-greyColor text-base lg:text-lg font-normal leading-tight lg:leading-7 flex"></p>
           <p class="text-greyColor text-base lg:text-lg font-normal leading-tight lg:leading-7 flex">John Doe</p>
         </div>
-        <a href="" class="hidden lg:flex"><img src="images/testimonialImg1.jpg" class="w-[36px] h-[36px] rounded-full" alt=""></a>
+        <a href="profile.html" class="hidden lg:flex"><img src="images/testimonialImg1.jpg" class="w-[36px] h-[36px] rounded-full" alt=""></a>
         <div id="menu-btn" class="lg:hidden"><i class="fa-solid fa-bars" style="color: #000000;"></i></div>
       </div>
     </section>
@@ -70,7 +87,6 @@
           <p>Events</p>
         </div>
       </a>
-      </a>
       <!--Menu link-->
       <a href="programsDashboard.html" class="w-full">
         <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
@@ -78,32 +94,27 @@
           <p>Programs</p>
         </div>
       </a>
-      </a>
       <!--Menu link-->
-      <a href="" class="w-full">
+      <a href="profile.html" class="w-full">
         <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
           <img src="images/dashboard/profile.svg" alt="">
           <p>My profile</p>
         </div>
       </a>
-      </a>
       <!--Menu link-->
-      <a href="" class="w-full">
+      <a href="changePasswordDashboard.html" class="w-full">
         <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
           <img src="images/dashboard/changePassword.svg" alt="">
           <p>Change password</p>
         </div>
       </a>
-      </a>
-      <!--Menu link-->
-      <a href="" class="w-full">
-        <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
-          <img src="images/dashboard/Logout.svg" alt="">
-          <p>Logout</p>
-        </div>
-      </a>
-       </div>
-     </section>
+      <!--Logout popup-->
+      <div id="open-logout-popup" class="p-5 hover:bg-lightBg transition-colors cursor-pointer justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+        <img src="images/dashboard/Logout.svg" alt="">
+        <p>Logout</p>
+      </div>
+    </div>
+    </section>
      <!--Dashboard Menu popup (End)-->
   
   <!--Dashboard Section-->
@@ -124,7 +135,6 @@
           <p>Events</p>
         </div>
       </a>
-      </a>
       <!--Menu link-->
       <a href="programsDashboard.html" class="w-full">
         <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
@@ -132,30 +142,25 @@
           <p>Programs</p>
         </div>
       </a>
-      </a>
       <!--Menu link-->
-      <a href="" class="w-full">
+      <a href="profile.html" class="w-full">
         <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
           <img src="images/dashboard/profile.svg" alt="">
           <p>My profile</p>
         </div>
       </a>
-      </a>
       <!--Menu link-->
-      <a href="" class="w-full">
+      <a href="changePasswordDashboard.html" class="w-full">
         <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
           <img src="images/dashboard/changePassword.svg" alt="">
           <p>Change password</p>
         </div>
       </a>
-      </a>
-      <!--Menu link-->
-      <a href="" class="w-full">
-        <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
-          <img src="images/dashboard/Logout.svg" alt="">
-          <p>Logout</p>
-        </div>
-      </a>
+      <!--Logout popup-->
+      <div id="open-logout-popup2" class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full cursor-pointer">
+        <img src="images/dashboard/Logout.svg" alt="">
+        <p>Logout</p>
+      </div>
     </div>
 
     <!--Main Dashboard section-->

@@ -19,6 +19,30 @@ function showTime(){
 showTime()
 
 
+//Logout popup                                                                                                                                                                                                                                                                                              form popup
+const logoutSection = document.getElementById("logout-popup-section");
+const openLogoutBtn = document.getElementById("open-logout-popup");
+const openLogoutBtn2 = document.getElementById("open-logout-popup2");
+const closeLogoutBtn = document.getElementById("close-logout-popup");
+const closeLogoutBtn2 = document.getElementById("cancel-logout-popup");
+
+function logout() {
+  logoutSection.classList.toggle("hidden");
+  logoutSection.classList.toggle("flex");
+}
+openLogoutBtn.addEventListener("click", () => {
+  logout();
+});
+openLogoutBtn2.addEventListener("click", () => {
+  logout();
+});
+closeLogoutBtn.addEventListener("click", () => {
+  logout();
+});
+closeLogoutBtn2.addEventListener("click", () => {
+  logout();
+});
+
 //Menu popup
 const menuSection = document.getElementById("mobileMenu");
 const menuBtn = document.getElementById("menu-btn");

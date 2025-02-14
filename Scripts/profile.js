@@ -54,6 +54,51 @@ closeLogoutBtn2.addEventListener("click", () => {
   logout();
 });
 
+//Edit profile form popup                                                                                                                                                                                                                                                                                              form popup
+const editProfileSection = document.getElementById("edit-profile-popup-section");
+const openEditProfileFormBtn = document.getElementById("open-edit-profle-form-popup");
+const closeEditProfileFormBtn = document.getElementById("close-edit-profle-form-popup");
+function showEditProfileForm() {
+    editProfileSection.classList.toggle("hidden");
+    editProfileSection.classList.toggle("flex");
+}
+openEditProfileFormBtn.addEventListener("click", () => {
+    showEditProfileForm();
+});
+closeEditProfileFormBtn.addEventListener("click", () => {
+    showEditProfileForm();
+});
+
+//Profile image change
+let input = document.getElementById('new-photo');
+function previewImage() {
+    let preview = document.getElementById('imagePreview');
+
+    while (preview.firstChild) {
+      preview.removeChild(preview.firstChild);
+    }
+
+    var file = input.files[0];
+
+    if (file) {
+      let reader = new FileReader();
+
+      reader.onload = function (e) {
+        let img = document.createElement('img');
+        img.src = e.target.result;
+        img.style.width = '96px';
+        img.style.height = '96px';
+        img.style.borderRadius = '9999px';
+        preview.appendChild(img);
+      };
+
+      reader.readAsDataURL(file);
+    }
+}
+input.addEventListener('change', ()=>{
+    previewImage()
+})
+
 
 //Tabs switch
 
@@ -80,5 +125,4 @@ function showEvents() {
     })
   })
 }
-
 showEvents()

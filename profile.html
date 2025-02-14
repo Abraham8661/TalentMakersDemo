@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Development Bootcamp</title>
+    <title>My Profile</title>
     <link
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
       rel="stylesheet"
@@ -35,10 +35,11 @@
       src="https://cdn.jsdelivr.net/npm/moment/min/moment.min.js"
       defer
     ></script>
-    <script src="Scripts/programsDetailsDashboard.js" defer></script>
+    <script src="Scripts/profile.js" defer></script>
   </head>
   <body class="bg-[#F4F4F4]">
 
+    
     <!--Logout popup-->
     <section id="logout-popup-section" class="p-6 w-full gap-[10px] lg:gap-[20px] hidden flex-col items-center justify-center h-screen top-0 z-50 bg-black/70 fixed">
       <div class="p-5 bg-white rounded-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%]">
@@ -55,6 +56,55 @@
         </div>
       </div>
      </section> 
+
+    <!--Edit profile form popup-->
+    <section id="edit-profile-popup-section" class="p-6 w-full gap-[10px] lg:gap-[20px] hidden flex-col items-center justify-center h-screen top-0 z-50 bg-black/70 fixed">
+        <div class="p-5 bg-white rounded-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%]">
+          <div class="flex items-center justify-center gap-[20px] w-full">
+            <h2 class="text-gray-900 text-xl lg:text-2xl font-bold leading-normal lg:leading-[44px] w-full text-center">Edit profile</h2>
+            <div id="close-edit-profle-form-popup" class="cursor-pointer"><i class="fa-solid fa-xmark" style="color: #000000;"></i></div>
+          </div>
+          <!--Edit profile form-->
+          <form action="" method="post" enctype="multipart/form-data" class="flex flex-col items-start justify-start gap-[20px] w-full">
+            <div class="flex flex-col items-center justify-start gap-[10px] w-full">
+                <!--Profile image-->
+                <div class="w-full flex flex-col items-center">
+                    <div id="imagePreview" class="w-[96px] h-[96px] object-cover rounded-full">
+                        <img class="w-full h-full rounded-full" src="images/testimonialImg1.jpg"/>
+                    </div>
+                    <div class="flex items-center justify-start absolute mt-16 md:mt-16 ml-10 md:ml-16">
+                        <img src="images/imageIcon.svg" alt="">
+                        <!--Profile image input-->
+                        <input id="new-photo" class="opacity-0 absolute" type="file" name="new-profile-photo" accept="image/*" >
+                    </div>
+                </div>
+              <!--Form item-->
+              <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+                <label for="fullName" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Full name</label>
+                <input type="text" value="John Doe" placeholder="Enter your full name" name="fullName" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+              </div>
+              <!--Form item-->
+              <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+                <label for="phoneNumber" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Phone number</label>
+                <input type="tel" value="08025445451" name="phoneNumber" placeholder="Enter your phone number" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+              </div>
+              <!--Form item-->
+              <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+                <label for="country" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Country</label>
+                <select name="country" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+                    <!--Run an if check here using the django if tag. If there is no country set, show this. Else insert the country in the first option-->
+                  <option value="" disabled selected>Select..</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="Ghana">Ghana</option>
+                  <option value="Others">Others</option>
+                </select>
+              </div>
+            </div>
+            
+            <button class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Save changes</button>
+          </form>
+        </div>
+      </section>
 
     <!--Header and Nav Bar-->
     <section class="w-full mx-auto fixed top-0">
@@ -87,19 +137,22 @@
           <p>Events</p>
         </div>
       </a>
-      <!--Menu link-->
-      <a href="" class="w-full">
-        <div class="p-5 bg-lightBg hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
-          <img src="images/dashboard/programs.svg" alt="">
-          <p>Programs</p>
-        </div>
       </a>
       <!--Menu link-->
       <a href="" class="w-full">
         <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/programs.svg" alt="">
+          <p>Programs</p>
+        </div>
+      </a>
+      </a>
+      <!--Menu link-->
+      <a href="" class="w-full">
+        <div class="p-5 bg-lightBg hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
           <img src="images/dashboard/profile.svg" alt="">
           <p>My profile</p>
         </div>
+      </a>
       </a>
       <!--Menu link-->
       <a href="" class="w-full">
@@ -108,12 +161,13 @@
           <p>Change password</p>
         </div>
       </a>
+      </a>
       <!--Logout popup-->
       <div id="open-logout-popup" class="p-5 hover:bg-lightBg transition-colors cursor-pointer justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
         <img src="images/dashboard/Logout.svg" alt="">
         <p>Logout</p>
       </div>
-    </div>
+      </div>
     </section>
      <!--Dashboard Menu popup (End)-->
   
@@ -135,19 +189,22 @@
           <p>Events</p>
         </div>
       </a>
-      <!--Menu link-->
-      <a href="" class="w-full">
-        <div class="p-5 bg-lightBg hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
-          <img src="images/dashboard/programs.svg" alt="">
-          <p>Programs</p>
-        </div>
       </a>
       <!--Menu link-->
       <a href="" class="w-full">
         <div class="p-5 hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
+          <img src="images/dashboard/programs.svg" alt="">
+          <p>Programs</p>
+        </div>
+      </a>
+      </a>
+      <!--Menu link-->
+      <a href="" class="w-full">
+        <div class="p-5 bg-lightBg hover:bg-lightBg transition-colors justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
           <img src="images/dashboard/profile.svg" alt="">
           <p>My profile</p>
         </div>
+      </a>
       </a>
       <!--Menu link-->
       <a href="" class="w-full">
@@ -156,6 +213,8 @@
           <p>Change password</p>
         </div>
       </a>
+      </a>
+      <!--Menu link-->
       <!--Logout popup-->
       <div id="open-logout-popup2" class="p-5 hover:bg-lightBg transition-colors cursor-pointer justify-start items-center gap-2.5 inline-flex text-green-950 text-lg font-medium w-full">
         <img src="images/dashboard/Logout.svg" alt="">
@@ -163,111 +222,48 @@
       </div>
     </div>
 
-    <!--Main Event Dashboard section-->
-    <div id="eventDashboard" class="w-full lg:w-[75%] flex flex-col gap-10 items-start justify-start lg:ml-auto">
+    <!--Main Profile Dashboard section-->
+    <div class="w-full lg:w-[75%] flex flex-col gap-10 items-start justify-start lg:ml-auto">
       <div class="pb-5 border-b border-[#d0d2d3] flex-col justify-start items-start gap-2.5 inline-flex w-full">
-        <div class="flex items-center justify-start gap-2.5">
-            <a href="programsDashboard.html"><i class="fa-solid fa-chevron-left" style="color: #6a0dad;"></i></a>
-            <h2 class="text-gray-900 text-xl lg:text-[24px] font-bold leading-normal lg:leading-[44px]">Web Development Bootcamp</h2>
-        </div>
-        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">You’re enrolled for this program! Here are the details.</p>
+        <h2 class="text-gray-900 text-xl lg:text-[24px] font-bold leading-normal lg:leading-[44px]">My Profile</h2>
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7 w-full">Manage your personal details easily here.</p>
       </div>
-      <!--Programs image-->
-      <img class="w-full object-cover h-[150px] md:h-[300px] rounded-[5px]" src="images/web_dev image.png" alt="">
-
-      <!--Other programs info-->
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 w-full">
-        <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col md:flex-row justify-start items-start gap-5 md:gap-10 flex w-full md:w-fit">
-          <!--Program registration date-->
-          <div class="flex flex-col items-start justify-center gap-2">
-            <img src="images/calender.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Date Enrolled</p>
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">January 15th, 2025</p>
-          </div>
-          <!--Program status-->
-          <div class="flex flex-col items-start justify-center gap-2">
-            <img src="images/eventStatus.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Program Status</p>
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Active</p>
-          </div>
-          <!--Start date-->
-          <div class="flex flex-col items-start justify-center gap-2">
-            <img src="images/startDate.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Start Date</p>
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">January 30th, 2025</p>
-          </div>
-          <!--End date-->
-          <div class="flex flex-col items-start justify-center gap-2">
-            <img src="images/endDatesvg.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">End Date</p>
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">April 30th, 2025</p>
-          </div>
+      <div class="p-5 bg-white rounded-[20px] shadow-md flex-col justify-start items-start gap-5 inline-flex w-full">
+        <div class="py-5 border-b border-[#d0d2d3] justify-between items-start md:items-center flex flex-col md:flex-row w-full gap-5">
+            <div class="justify-start items-center gap-5 flex">
+                <img class="w-18 h-18 md:w-24 md:h-24 rounded-full" src="images/testimonialImg1.jpg"/>
+                <div class="flex-col justify-start items-start gap-[5px] inline-flex">
+                    <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">John Doe</p>
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">johndoe@gmail.com</p>
+                </div>
+            </div>
+            <button id="open-edit-profle-form-popup" type="button" class="flex px-5 py-2.5 rounded-[10px] border border-priColor justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose">Edit profile</button>
         </div>
-        <a href=""class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Join channel</a>
-      </div>
-
-       <!--Key Modules section-->
-      <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[20px] inline-flex w-full">
-        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose">What You'll Learn (Key Modules)</h6>
-        <div class="flex items-center justify-center gap-[10px]">
-          <img src="images/checkmark.png" alt="" srcset="">
-          <div class="flex flex-col items-start justify-start gap-[10px]">
-            <h5 class="text-gray-900 text-base lg:text-lg font-bold leading-tight lg:leading-7">HTML5 and CSS3</h5>
-            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Learn to structure and style websites.</p>
-          </div>
+        <div class="flex items-start gap-5 flex-col md:flex-row md:gap-10">
+            <div class="flex items-start gap-5 flex-col">
+                <div class="flex flex-col items-start justify-center gap-2">
+                    <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Full Name</p>
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">John Doe</p>
+                </div>
+                <div class="flex flex-col items-start justify-center gap-2">
+                    <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Email Address</p>
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">johndoe@gmail.com</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-5 flex-col">
+                <div class="flex flex-col items-start justify-center gap-2">
+                    <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Phone Number</p>
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">08025445451</p>
+                </div>
+                <div class="flex flex-col items-start justify-center gap-2">
+                    <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Country</p>
+                    <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Nigeria</p>
+                </div>
+            </div>
         </div>
-        <div class="flex items-center justify-center gap-[10px]">
-          <img src="images/checkmark.png" alt="" srcset="">
-          <div class="flex flex-col items-start justify-start gap-[10px]">
-            <h5 class="text-gray-900 text-base lg:text-lg font-bold leading-tight lg:leading-7">JavaScript Fundamentals</h5>
-            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Add interactivity and logic to your web pages.</p>
-          </div>
-        </div>
-        <div class="flex items-center justify-center gap-[10px]">
-          <img src="images/checkmark.png" alt="" srcset="">
-          <div class="flex flex-col items-start justify-start gap-[10px]">
-            <h5 class="text-gray-900 text-base lg:text-lg font-bold leading-tight lg:leading-7">Front-End Frameworks</h5>
-            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Master React for building dynamic user interfaces.</p>
-          </div>
-        </div>
-        <div class="flex items-center justify-center gap-[10px]">
-          <img src="images/checkmark.png" alt="" srcset="">
-          <div class="flex flex-col items-start justify-start gap-[10px]">
-            <h5 class="text-gray-900 text-base lg:text-lg font-bold leading-tight lg:leading-7">Responsive Design</h5>
-            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Create mobile-friendly and accessible websites.</p>
-          </div>
-        </div>
-        <div class="flex items-center justify-center gap-[10px]">
-          <img src="images/checkmark.png" alt="" srcset="">
-          <div class="flex flex-col items-start justify-start gap-[10px]">
-            <h5 class="text-gray-900 text-base lg:text-lg font-bold leading-tight lg:leading-7">Back-End Development</h5>
-            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Explore Node.js and Express for server-side programming.</p>
-          </div>
-        </div>
-        <div class="flex items-center justify-center gap-[10px]">
-          <img src="images/checkmark.png" alt="" srcset="">
-          <div class="flex flex-col items-start justify-start gap-[10px]">
-            <h5 class="text-gray-900 text-base lg:text-lg font-bold leading-tight lg:leading-7">Databases</h5>
-            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Store and manage data using MongoDB.</p>
-          </div>
-        </div>
-        <div class="flex items-center justify-center gap-[10px]">
-          <img src="images/checkmark.png" alt="" srcset="">
-          <div class="flex flex-col items-start justify-start gap-[10px]">
-            <h5 class="text-gray-900 text-base lg:text-lg font-bold leading-tight lg:leading-7">Version Control</h5>
-            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Collaborate with Git and GitHub.</p>
-          </div>
-        </div>
-        <div class="flex items-center justify-center gap-[10px]">
-          <img src="images/checkmark.png" alt="" srcset="">
-          <div class="flex flex-col items-start justify-start gap-[10px]">
-            <h5 class="text-gray-900 text-base lg:text-lg font-bold leading-tight lg:leading-7">Final Project</h5>
-            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Build a full-stack application to showcase your skills.</p>
-          </div>
-        </div>
-      </div>
 
     </div>
+
   </section>
   </body>
 </html>
