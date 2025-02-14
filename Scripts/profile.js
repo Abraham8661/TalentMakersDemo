@@ -89,6 +89,7 @@ function previewImage() {
         img.style.width = '96px';
         img.style.height = '96px';
         img.style.borderRadius = '9999px';
+        img.style.objectFit = 'cover';
         preview.appendChild(img);
       };
 
