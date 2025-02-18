@@ -18,14 +18,20 @@
   <script src="https://kit.fontawesome.com/106c35bf5a.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/moment/min/moment.min.js" defer></script>
   <script src="Scripts/home.js?" defer></script>
+  <script src="Scripts/cookies.js" defer></script>
 </head>
 <body class="bg-[#F4F4F4]">
-  <!--
-  <div id="loading-screen" class="w-full hidden fixed z-20 bg-black/50 h-full items-center justify-center mx-auto p-6">
-  <img src="/images/search-gi.gif" alt="" srcset="">
-  lg:max-w-7xl
-  </div>
-  -->
+
+  <!--Cookies Section-->
+  <section id="cookies-section" class="w-full hidden flex-row mx-auto mb-[80px] justify-between items-end gap-[40px] lg:gap-[80px] z-20 h-screen fixed transition-all duration-500">
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-5 justify-between bg-white px-5 md:px-10 py-5 w-full shadow-md">
+      <p class="text-gray-950 text-base lg:text-lg font-normal leading-tight lg:leading-7 w-full md:w-2/3">We use cookies to improve site functionality, analyze usage, and personalize content. By continuing to use our site, you agree to our <span><a href="" class="text-priColor">cookie policy.</a></span></p>
+      <div class="flex items-center justify-start gap-5">
+        <button id="declineCookies" type="button" class="lg:flex rounded-[10px] border border-priColor justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose">Decline</button>
+        <button id="acceptCookies" class="flex px-5 py-2.5 bg-priColor text-white text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Accept</button>
+      </div>
+    </div>
+  </section>
 
   <!--Gallery popup Section-->
  <section id="gallery-popup-section" class="p-6 w-full gap-[10px] lg:gap-[20px] hidden flex-col items-end justify-center h-full z-20 bg-black/70 fixed">

@@ -32,10 +32,49 @@
       src="https://cdn.jsdelivr.net/npm/moment/min/moment.min.js"
       defer
     ></script>
-    <script src="Scripts/blog.js" defer></script>
+    <script src="Scripts/blogDetails.js" defer></script>
   </head>
   <body class="bg-[#F4F4F4]"></body>
 </html>
+
+   <!--Share article popup-->
+   <section id="share-article-section" class="p-6 w-full gap-[10px] lg:gap-[20px] hidden flex-col items-center justify-center h-screen top-0 z-50 bg-black/70 fixed">
+    <div class="p-5 bg-white rounded-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%]">
+      <div class="flex items-center justify-center gap-[20px] w-full">
+        <h2 class="text-gray-900 text-xl lg:text-2xl font-bold leading-normal lg:leading-[44px] w-full text-center">Share Article to Friends!</h2>
+        <div id="close-Share-article-popup" class="cursor-pointer"><i class="fa-solid fa-xmark" style="color: #000000;"></i></div>
+      </div>
+      <div class="flex flex-col items-start justify-start gap-2.5 w-full">
+        <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Share this article via:</p>
+        <div class="flex items-center justify-start gap-5">
+          <a href="">
+            <div class="cursor-pointer bg-lightBg w-[40px] h-[40px] rounded-full justify-center text-base lg:text-lg items-center inline-flex">
+              <i class="fa-brands fa-facebook" style="color: #111827;"></i>
+            </div>
+          </a>
+          <a href="">
+            <div class="cursor-pointer bg-lightBg w-[40px] h-[40px] rounded-full justify-center text-base lg:text-lg items-center inline-flex">
+              <i class="fa-brands fa-x-twitter" style="color: #111827;"></i>
+            </div>
+          </a>
+          <a href="">
+            <div class="cursor-pointer bg-lightBg w-[40px] h-[40px] rounded-full justify-center text-base lg:text-lg items-center inline-flex">
+              <i class="fa-brands fa-linkedin" style="color: #111827;"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col items-start justify-start gap-2.5 w-full">
+        <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Or copy link:</p>
+        <div class="flex items-center justify-start gap-2.5 px-3 py-3 bg-lightBg rounded-lg w-full">
+          <i class="fa-solid fa-link"  style="color: #111827;"></i>
+          <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7 line-clamp-1">http://127.0.0.1:5500/TalentMakers/blogDetails.html</p>
+          <button id="copyLink" class="flex px-5 py-2.5 bg-priColor text-white text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Copy</button>
+        </div>
+      </div>
+    </div>
+   </section> 
+
 
 <!--Header and Nav Bar-->
 <section class="w-full mx-auto">
@@ -128,18 +167,115 @@
       “TalentMakers didn’t just teach me skills; they gave me a platform to believe in myself and make a difference,” Dave reflects.
       As he looks to the future, Dave aspires to launch his own tech startup, focusing on solutions that empower rural communities like the one he grew up in. His story continues to inspire others, proving that with the right support, no dream is too big to achieve.
     </div>
+    <!--Like, share and social media links-->
+    <div class="py-5 border-y border-[#d0d2d3] justify-between items-center inline-flex w-full">
+      <div class="flex gap-5 items-center justify-start">
+        <!--Like article form-->
+        <form action="" method="post" id="likeArticleForm" class="flex items-center gap-1.5 justify-start">
+          <input type="text" class="hidden" name="articleToLike" value="article-slug-here">
+          <button id="like-btn" type="button" class="yesLike cursor-pointer rounded-full justify-start text-base lg:text-lg items-center gap-2 inline-flex"><i class="fa-regular fa-thumbs-up" style="color: #0d0d0d;"></i></button>
+          <p id="aricleLikes" class="text-gray-900 select-none text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">22</p>
+        </form>
+        <!--Share article-->
+        <div id="open-Share-article-popup" class="flex items-center cursor-pointer gap-2.5 justify-start">
+          <button class="justify-start items-center gap-2 inline-flex"><img src="images/shareBtn.svg" alt=""></button>
+        </div>
+      </div>
+      <!--TalentMakers Social media pages-->
+      <div class="flex items-center gap-5 justify-start">
+        <a href="" class="text-base lg:text-lg"><i class="fa-brands fa-facebook" style="color: #111827;"></i></a>
+        <a href="" class="text-base lg:text-lg"><i class="fa-brands fa-x-twitter" style="color: #111827;"></i></a>
+        <a href="" class="text-base lg:text-lg"><i class="fa-brands fa-linkedin" style="color: #111827;"></i></a>
+      </div>
+    </div>
   </section>
 
-
- <!--Get involved Section-->
- <section id="get-involved-section" class="max-w-sm lg:max-w-[85rem] px-6 py-10 lg:py-20 lg:px-0 flex flex-col mx-auto mt-[80px] lg:mt-[150px] justify-center items-center gap-[40px] lg:gap-[40px] bg-[url('../images/getInvolved_Desktop.png')] md:bg-[url('../images/getInvolved_Desktop.png')] bg-cover bg-center bg-no-repeat rounded-[20px]">
-    <div class="flex flex-col gap-[20px] items-center justify-center text-center">
-      <h1 class="text-white text-2xl lg:text-5xl font-bold leading-[30px] lg:leading-[64px]">Join Us in Empowering Talents</h1>
-      <p class="text-white text-base lg:text-lg font-normal leading-tight lg:leading-7">Together, we can create opportunities, foster innovation, and drive lasting change. Be a <br> part of the movement to transform lives through technology and education</p>
-      <a href=""class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Get involved</a>
+    <!--Blog Section-->
+    <section id="" class="lg:max-w-[85rem] px-6 lg:px-0 w-full flex flex-col mx-auto mt-[80px] lg:mt-[150px] mb-[40px] justify-center items-center gap-[40px] lg:gap-[40px]">
+      <div class="flex flex-col items-center justify-center gap-[20px] w-full lg:w-[754px]">
+        <h2 class="text-gray-900 text-xl lg:text-[36px] font-bold leading-normal lg:leading-[44px]">More Stories You Might Like</h2>
+        <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Stay updated with the latest insights, success stories, and news from TalentMakers Foundation. Keep exploring!</p>
+      </div>
+      <div class="swiper default-carousel swiper-container flex justify-between items-center gap-5 w-full">
+       <div class="swiper-wrapper mb-10 flex justify-between items-center gap-5 w-full flex-row duration-700 ease-in-out">
+          <!---All the cards are here-->
+          <!---Start of first card-->
+          <div class="swiper-slide blog-card flex p-5 bg-white rounded-[10px] flex-col justify-center items-start gap-5">
+              <img class="w-[300px] h-[161px] object-cover rounded-[5px]" src="images/article_img.png" alt="">
+              <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose line-clamp-2">Dave Journey with TalentMakers</h6>
+              <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7 line-clamp-2">TalentMakers gave me the skills and confidence to succeed in tech. Today</p>
+              <div class="flex gap-5 items-center justify-start">
+                <div class="flex gap-2">
+                  <img src="images/calender.svg" alt="">
+                  <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">March 8, 2025</p>
+                </div>
+              </div>
+              <a class="py-2.5 rounded-[10px] flex justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose" href="">Read more <i class="fa-solid fa-arrow-right" style="color: #6a0dad;"></i></a>
+          </div>
+          <!---End of first card-->
+          <!---Start of others card-->
+          <div class="swiper-slide blog-card flex p-5 bg-white rounded-[10px] flex-col justify-center items-start gap-5">
+              <img class="w-[300px] h-[161px] object-cover rounded-[5px]" src="images/article_img.png" alt="">
+              <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose line-clamp-2">Dave Journey with TalentMakers</h6>
+              <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7 line-clamp-2">TalentMakers gave me the skills and confidence to succeed in tech. Today</p>
+              <div class="flex gap-5 items-center justify-start">
+                <div class="flex gap-2">
+                  <img src="images/calender.svg" alt="">
+                  <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">March 8, 2025</p>
+                </div>
+              </div>
+              <a class="py-2.5 rounded-[10px] flex justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose" href="">Read more <i class="fa-solid fa-arrow-right" style="color: #6a0dad;"></i></a>
+          </div>
+          <div class="swiper-slide blog-card flex p-5 bg-white rounded-[10px] flex-col justify-center items-start gap-5">
+              <img class="w-[300px] h-[161px] object-cover rounded-[5px]" src="images/article_img.png" alt="">
+              <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose line-clamp-2">Dave Journey with TalentMakers</h6>
+              <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7 line-clamp-2">TalentMakers gave me the skills and confidence to succeed in tech. Today</p>
+              <div class="flex gap-5 items-center justify-start">
+                <div class="flex gap-2">
+                  <img src="images/calender.svg" alt="">
+                  <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">March 8, 2025</p>
+                </div>
+              </div>
+              <a class="py-2.5 rounded-[10px] flex justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose" href="">Read more <i class="fa-solid fa-arrow-right" style="color: #6a0dad;"></i></a>
+          </div>
+          <div class="swiper-slide blog-card flex p-5 bg-white rounded-[10px] flex-col justify-center items-start gap-5">
+              <img class="w-[300px] h-[161px] object-cover rounded-[5px]" src="images/article_img.png" alt="">
+              <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose line-clamp-2">Dave Journey with TalentMakers</h6>
+              <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7 line-clamp-2">TalentMakers gave me the skills and confidence to succeed in tech. Today</p>
+              <div class="flex gap-5 items-center justify-start">
+                <div class="flex gap-2">
+                  <img src="images/calender.svg" alt="">
+                  <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">March 8, 2025</p>
+                </div>
+              </div>
+              <a class="py-2.5 rounded-[10px] flex justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose" href="">Read more <i class="fa-solid fa-arrow-right" style="color: #6a0dad;"></i></a>
+          </div>
+          <div class="swiper-slide blog-card flex p-5 bg-white rounded-[10px] flex-col justify-center items-start gap-5">
+              <img class="w-[300px] h-[161px] object-cover rounded-[5px]" src="images/article_img.png" alt="">
+              <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose line-clamp-2">Dave Journey with TalentMakers</h6>
+              <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7 line-clamp-2">TalentMakers gave me the skills and confidence to succeed in tech. Today</p>
+              <div class="flex gap-5 items-center justify-start">
+                <div class="flex gap-2">
+                  <img src="images/calender.svg" alt="">
+                  <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">March 8, 2025</p>
+                </div>
+              </div>
+              <a class="py-2.5 rounded-[10px] flex justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose" href="">Read more <i class="fa-solid fa-arrow-right" style="color: #6a0dad;"></i></a>
+          </div>
+          <!---End of others card-->
+       </div>
+       <div class="absolute flex items-center justify-between w-full m-auto bottom-12">
+       <div class="flex justify-center items-center">
+        <button id="slider-button-left" class="swiper-button-prev !p-2 flex justify-center items-center border border-solid !border-priColor text-priColor hover:text-white !w-12 !h-12 transition-all duration-500 rounded-full hover:bg-priColor " data-carousel-prev>
+        </button>
+        <button id="slider-button-right" class="swiper-button-next !p-2 flex justify-center items-center border border-solid !border-priColor text-priColor hover:text-white !w-12 !h-12 transition-all duration-500 rounded-full hover:bg-priColor" data-carousel-next>
+        </button>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
+      </div>
     </section>
-  
+
      <!--Footer Section-->
    <footer id="footer-section" class="px-[1.3rem] lg:px-[50px] py-[1.3rem] lg:py-[50px] bg-lightBg w-full flex flex-col mx-auto mt-[80px] lg:mt-[150px] justify-between items-center gap-[20px] lg:gap-[40px]">
       <div class="w-full flex flex-col lg:flex-row mx-auto justify-between items-start gap-[20px] lg:gap-[80px]">
@@ -188,5 +324,38 @@
     </div>
     </footer>
 
+  <script>
+      let swiper = new Swiper(".default-carousel", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".default-carousel .swiper-button-next",
+      prevEl: ".default-carousel .swiper-button-prev",
+    },
+    breakpoints: {
+     1920: {
+         slidesPerView: 4,
+         spaceBetween: 20
+     },
+     1028: {
+         slidesPerView: 4,
+         spaceBetween: 20
+     },
+     990: {
+         slidesPerView: 1,
+         spaceBetween: 10
+     },
+     640: {
+         slidesPerView: 1,
+         spaceBetween: 10
+     }
+   }
+  });
+  </script>  
 </body>
 </html>

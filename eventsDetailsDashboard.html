@@ -340,17 +340,15 @@
       <!--Event Ticket Section-->
         <!--Download ticket-->
         <!--Please Use reportlab or WeasyPrint via Django to generate a PDF from the ticketDownload.html page and serve the PDF dynamically from a Django view.-->
-      <div class="w-full flex flex-col md:flex-row items-center justify-between p-2.5 md:p-5 bg-lightBg gap-5">
-        <!--Event image-->
-        <img class="w-full object-cover md:w-1/4 h-[150px] md:h-[361px] rounded-[5px]" src="images/web_dev image.png" alt="">
+      <div class="w-full lg:w-[75%] flex flex-col md:flex-row items-center justify-between p-2.5 md:p-5 bg-lightBg gap-5">
         <!--Event details-->
-        <div class="flex flex-col justify-between items-start gap-5 w-full md:w-2/4">
+        <div class="flex flex-col justify-between items-start gap-5 w-full md:w-[60%]">
             <div class="p-2.5 bg-priColor rounded-[5px] justify-center items-center gap-2.5 inline-flex">
-                <div class="text-white text-base md:text-[20px] font-semibold">EVENT TICKET</div>
+                <div class="text-white text-base md:text-[18px] font-semibold">EVENT TICKET</div>
             </div>
             <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-5 flex">
                 <div class="flex flex-col items-start justify-start gap-[10px]">
-                    <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-tight md:leading-loose line-clamp-2">Youth Empowerment Hackathon 2025</h6>
+                    <h6 class="text-gray-900 text-base lg:text-xl font-bold leading-tight md:leading-loose line-clamp-2">Youth Empowerment Hackathon 2025</h6>
                     <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Collaborate, Innovate, Empower: Be Part of the Change!</p>
                     <div class="flex gap-2">
                       <img src="images/calender.svg" alt="">
@@ -368,7 +366,7 @@
             </div>
         </div>
         <!--User Info-->
-        <div class="w-full md:w-1/4 pt-5 md:pt-0 md:pl-5 border-t md:border-t-0 md:border-l border-dashed border-gray-900 justify-between items-center gap-[2px] inline-flex">
+        <div class="w-full md:w-[40%] pt-5 md:pt-0 md:pl-5 border-t md:border-t-0 md:border-l border-dashed border-gray-900 justify-between items-center gap-[2px] inline-flex">
             <div class="p-5 bg-priColor rounded-lg flex-col justify-between items-center gap-2.5 md:gap-5 inline-flex">
                 <div class="flex-col justify-center items-center gap-2.5 flex w-full">
                     <img src="images/testimonialImg1.jpg" class="w-[60px] h-[60px] md:w-[108px] md:h-[108px] rounded-full" alt="">
@@ -387,26 +385,6 @@
 
       <!--Other event info-->
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 w-full">
-        <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col md:flex-row justify-start items-start gap-5 md:gap-10 flex w-full md:w-fit">
-          <!--Event registration date-->
-          <div class="flex flex-col items-start justify-center gap-2">
-            <img src="images/calender.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Date Registered</p>
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">February 20 - 22, 2025</p>
-          </div>
-          <!--Event status-->
-          <div class="flex flex-col items-start justify-center gap-2">
-            <img src="images/eventStatus.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Event Status</p>
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Upcoming</p>
-          </div>
-          <!--Countdown-->
-          <div class="flex flex-col items-start justify-center gap-2">
-            <img src="images/hourGlass.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7">Countdown</p>
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">5 days left</p>
-          </div>
-        </div>
         <!--Please use the dtl if tag for this button-->
         <!--Share event feedback button to be shown if the event.status is == 'Past'-->
         <button id="showEventFeedbackForm" type="button" class="flex px-5 py-2.5 rounded-[10px] border border-priColor justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose">Share event feedback</button>
