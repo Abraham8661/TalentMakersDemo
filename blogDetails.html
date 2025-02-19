@@ -47,17 +47,17 @@
       <div class="flex flex-col items-start justify-start gap-2.5 w-full">
         <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Share this article via:</p>
         <div class="flex items-center justify-start gap-5">
-          <a href="">
+          <a href="#" id="shareFacebook" target="_blank">
             <div class="cursor-pointer bg-lightBg w-[40px] h-[40px] rounded-full justify-center text-base lg:text-lg items-center inline-flex">
               <i class="fa-brands fa-facebook" style="color: #111827;"></i>
             </div>
           </a>
-          <a href="">
+          <a href="#" id="shareTwitter" target="_blank">
             <div class="cursor-pointer bg-lightBg w-[40px] h-[40px] rounded-full justify-center text-base lg:text-lg items-center inline-flex">
               <i class="fa-brands fa-x-twitter" style="color: #111827;"></i>
             </div>
           </a>
-          <a href="">
+          <a href="#" id="shareLinkedIn" target="_blank">
             <div class="cursor-pointer bg-lightBg w-[40px] h-[40px] rounded-full justify-center text-base lg:text-lg items-center inline-flex">
               <i class="fa-brands fa-linkedin" style="color: #111827;"></i>
             </div>
@@ -68,8 +68,8 @@
         <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Or copy link:</p>
         <div class="flex items-center justify-start gap-2.5 px-3 py-3 bg-lightBg rounded-lg w-full">
           <i class="fa-solid fa-link"  style="color: #111827;"></i>
-          <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7 line-clamp-1">http://127.0.0.1:5500/TalentMakers/blogDetails.html</p>
-          <button id="copyLink" class="flex px-5 py-2.5 bg-priColor text-white text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Copy</button>
+          <p id="articleLink" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7 line-clamp-1"></p>
+          <button id="copyLink" class="flex px-5 py-2.5 bg-priColor text-white text-xl font-medium cursor-pointer rounded-[10px] justify-center items-center gap-2.5">Copy</button>
         </div>
       </div>
     </div>
