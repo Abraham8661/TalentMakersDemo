@@ -37,186 +37,691 @@
   <body class="bg-[#F4F4F4]"></body>
 </html>
 
-<!--Header and Nav Bar-->
-<section class="w-full mx-auto">
-    <div id="nav-bar" class="w-full flex items-center bg-white px-[1.3rem] lg:px-[50px] py-5 shadow-md justify-between">
-      <a href="./index.html"><img class="w-[120px] lg:w-[170px]" src="images/TalentMakers Logosvg.svg" alt=""></a>
-        <ul id="nav-links" class="hidden lg:flex justify-start items-center gap-10">
-          <a href="./index.html"><li class="text-greyColor text-lg font-medium">Home</li></a>
-          <a href=""><li class="text-priColor text-lg font-bold">Programs</li></a>
-          <a href=""><li class="text-greyColor text-lg font-medium">Events</li></a>
-          <a href=""><li class="text-greyColor text-lg font-medium">About us</li></a>
-          <a href=""><li class="text-greyColor text-lg font-medium">Contact us</li></a>
-          <a href=""><li class="text-greyColor text-lg font-medium">Blog</li></a>
-        </ul>
-        <div id="menu-btn" class="lg:hidden"><i class="fa-solid fa-bars" style="color: #000000;"></i></div>
-        <a href=""class="hidden lg:flex px-5 py-2.5 bg-priColor text-white text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Get involved</a>
+ <!--Program Registration form popup-->
+ <section id="progam-form-popup-section" class="p-6 w-full gap-[10px] lg:gap-[20px] hidden flex-col items-center justify-center h-full z-20 bg-black/70 fixed">
+  <div class="p-5 bg-white rounded-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%] h-full">
+    <div class="flex items-center justify-center gap-[20px] w-full">
+      <h2 class="text-gray-900 text-xl lg:text-2xl font-bold leading-normal lg:leading-[44px] w-full text-center">Program Registration</h2>
+      <div id="close-program-form-popup" class="cursor-pointer"><i class="fa-solid fa-xmark" style="color: #000000;"></i></div>
     </div>
-    <div class="hidden w-[291px] h-[291px] bg-[#ffd700] rounded-full absolute mb-10"></div>
+    <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Take the first step toward a brighter future. Fill out the form below to secure your spot in this program.</p>
+    <!--Registration form-->
+    <form action="" method="post" class="flex flex-col items-start justify-start gap-[20px] w-full h-full overflow-y-scroll">
+      <!--Program Information Section-->
+      <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Program Information</h6>
+        <!--Form item-->
+        <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+          <label for="programToJoin" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Select program to join </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+          <select name="programToJoin" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+            <option value="" disabled selected>Select..</option>
+            <option value="ITAwarenessProgram">IT Awareness Program</option>
+            <option value="AmbassadorProgram">Ambassador Program</option>
+          </select>
+        </div>
+        <!--Form item-->
+      </div>
+
+      <!--Personal Info Section-->
+      <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Personal Information</h6>
+        <!--Form item-->
+        <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+          <label for="fullName" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Full Name </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+          <input type="text" placeholder="Enter your full name" name="fullName" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+        </div>
+        <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+          <label for="email" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Email address </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+          <input type="email" placeholder="Enter your email address" name="email" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+        </div>
+        <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+          <label for="phoneNumber" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Phone number</label>
+          <input type="tel" placeholder="Enter your phone number" name="phoneNumber" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+        </div>
+        <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+          <label for="gender" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Gender</label>
+          <select name="gender" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+            <option value="" disabled selected>Select..</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+      </div>
+      <!--Address Information Section-->
+      <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Address Information</h6>
+        <!--Form item-->
+        <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+          <label for="CityRegion" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">City/Region </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+          <input type="text" placeholder="Enter your city or region" name="CityRegion" required id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+        </div>
+        <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+          <label for="country" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Country </span><span class="text-[#ff3b30] text-lg font-normal leading-7">*</span></label>
+          <select name="country" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+            <option class="text-base lg:text-lg font-normal" value="" disabled selected>Select..</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Åland Islands">Åland Islands</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Anguilla">Anguilla</option>
+            <option value="Antarctica">Antarctica</option>
+            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Aruba">Aruba</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Barbados">Barbados</option>
+            <option value="Belarus">Belarus</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Belize">Belize</option>
+            <option value="Benin">Benin</option>
+            <option value="Bermuda">Bermuda</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+            <option value="Botswana">Botswana</option>
+            <option value="Bouvet Island">Bouvet Island</option>
+            <option value="Brazil">Brazil</option>
+            <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+            <option value="Brunei Darussalam">Brunei Darussalam</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Burkina Faso">Burkina Faso</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Canada">Canada</option>
+            <option value="Cape Verde">Cape Verde</option>
+            <option value="Cayman Islands">Cayman Islands</option>
+            <option value="Central African Republic">Central African Republic</option>
+            <option value="Chad">Chad</option>
+            <option value="Chile">Chile</option>
+            <option value="China">China</option>
+            <option value="Christmas Island">Christmas Island</option>
+            <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Comoros">Comoros</option>
+            <option value="Congo">Congo</option>
+            <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+            <option value="Cook Islands">Cook Islands</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Cote D'ivoire">Cote D'ivoire</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Dominica">Dominica</option>
+            <option value="Dominican Republic">Dominican Republic</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Egypt">Egypt</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Equatorial Guinea">Equatorial Guinea</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+            <option value="Faroe Islands">Faroe Islands</option>
+            <option value="Fiji">Fiji</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="French Guiana">French Guiana</option>
+            <option value="French Polynesia">French Polynesia</option>
+            <option value="French Southern Territories">French Southern Territories</option>
+            <option value="Gabon">Gabon</option>
+            <option value="Gambia">Gambia</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Germany">Germany</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Gibraltar">Gibraltar</option>
+            <option value="Greece">Greece</option>
+            <option value="Greenland">Greenland</option>
+            <option value="Grenada">Grenada</option>
+            <option value="Guadeloupe">Guadeloupe</option>
+            <option value="Guam">Guam</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Guernsey">Guernsey</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Guinea-bissau">Guinea-bissau</option>
+            <option value="Guyana">Guyana</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+            <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Iceland">Iceland</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+            <option value="Iraq">Iraq</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Isle of Man">Isle of Man</option>
+            <option value="Israel">Israel</option>
+            <option value="Italy">Italy</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Japan">Japan</option>
+            <option value="Jersey">Jersey</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Kiribati">Kiribati</option>
+            <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+            <option value="Korea, Republic of">Korea, Republic of</option>
+            <option value="Kuwait">Kuwait</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Lesotho">Lesotho</option>
+            <option value="Liberia">Liberia</option>
+            <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+            <option value="Liechtenstein">Liechtenstein</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Macao">Macao</option>
+            <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Mali">Mali</option>
+            <option value="Malta">Malta</option>
+            <option value="Marshall Islands">Marshall Islands</option>
+            <option value="Martinique">Martinique</option>
+            <option value="Mauritania">Mauritania</option>
+            <option value="Mauritius">Mauritius</option>
+            <option value="Mayotte">Mayotte</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+            <option value="Moldova, Republic of">Moldova, Republic of</option>
+            <option value="Monaco">Monaco</option>
+            <option value="Mongolia">Mongolia</option>
+            <option value="Montenegro">Montenegro</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Mozambique">Mozambique</option>
+            <option value="Myanmar">Myanmar</option>
+            <option value="Namibia">Namibia</option>
+            <option value="Nauru">Nauru</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Netherlands Antilles">Netherlands Antilles</option>
+            <option value="New Caledonia">New Caledonia</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Niger">Niger</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Niue">Niue</option>
+            <option value="Norfolk Island">Norfolk Island</option>
+            <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+            <option value="Norway">Norway</option>
+            <option value="Oman">Oman</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Palau">Palau</option>
+            <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+            <option value="Panama">Panama</option>
+            <option value="Papua New Guinea">Papua New Guinea</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Peru">Peru</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Pitcairn">Pitcairn</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Puerto Rico">Puerto Rico</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Reunion">Reunion</option>
+            <option value="Romania">Romania</option>
+            <option value="Russian Federation">Russian Federation</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Saint Helena">Saint Helena</option>
+            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+            <option value="Saint Lucia">Saint Lucia</option>
+            <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+            <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+            <option value="Samoa">Samoa</option>
+            <option value="San Marino">San Marino</option>
+            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="Senegal">Senegal</option>
+            <option value="Serbia">Serbia</option>
+            <option value="Seychelles">Seychelles</option>
+            <option value="Sierra Leone">Sierra Leone</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Slovakia">Slovakia</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Solomon Islands">Solomon Islands</option>
+            <option value="Somalia">Somalia</option>
+            <option value="South Africa">South Africa</option>
+            <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+            <option value="Spain">Spain</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Suriname">Suriname</option>
+            <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+            <option value="Swaziland">Swaziland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+            <option value="Taiwan">Taiwan</option>
+            <option value="Tajikistan">Tajikistan</option>
+            <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Timor-leste">Timor-leste</option>
+            <option value="Togo">Togo</option>
+            <option value="Tokelau">Tokelau</option>
+            <option value="Tonga">Tonga</option>
+            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+            <option value="Tunisia">Tunisia</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Turkmenistan">Turkmenistan</option>
+            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+            <option value="Tuvalu">Tuvalu</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="United Arab Emirates">United Arab Emirates</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+            <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Uzbekistan">Uzbekistan</option>
+            <option value="Vanuatu">Vanuatu</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Viet Nam">Viet Nam</option>
+            <option value="Virgin Islands, British">Virgin Islands, British</option>
+            <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+            <option value="Wallis and Futuna">Wallis and Futuna</option>
+            <option value="Western Sahara">Western Sahara</option>
+            <option value="Yemen">Yemen</option>
+            <option value="Zambia">Zambia</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+          </select>
+        </div>
+      </div>
+      <!--Education Information Section-->
+      <div class="flex flex-col items-start justify-start gap-[10px] w-full">
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold text-center leading-tight lg:leading-7 w-full flex py-2.5 border-b border-[#e0e1e2] justify-start items-start">Educational Background</h6>
+        <!--Form item-->
+        <div class="flex flex-col gap-[10px] items-start justify-start w-full">
+          <label for="education" class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Education Level</label>
+          <select name="education" id="" class="w-full p-2.5 pr-0 rounded-[5px] border border-gray-900 justify-start items-start gap-2.5 flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">
+            <option value="" disabled selected>Select..</option>
+            <option value="Male">Primary school leaver</option>
+            <option value="Female">SSCE</option>
+            <option value="Others">Graduate</option>
+            <option value="Others">Post graduate</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex items-center justify-start gap-[10px] w-full">
+        <input type="checkbox" required class="custom-checkbox">
+        <p class="text-gray-900 text-sm font-normal leading-tight">I confirm that the information provided is accurate and agree to the program's terms and conditions</p>
+      </div>
+      <button class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Register</button>
+    </form>
+  </div>
 </section>
 
- <!--Menu popup-->
- <section id="mobileMenu" class="w-full gap-[10px] lg:gap-[20px] hidden lg:hidden flex-col items-center justify-center z-20 shadow-xl absolute duration-100 transition-transform">
-  <div class="p-5 bg-white rounded-b-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%] h-full">
-    <div id="" class="flex flex-col items-center justify-center gap-10">
-        <ul id="" class="flex flex-col justify-start items-center gap-10">
-          <a href="./index.html"><li class="text-gray-950 text-lg font-medium">Home</li></a>
-          <a href="./programs.html"><li class="text-gray-950 text-lg font-medium">Programs</li></a>
-          <a href="events.html"><li class="text-gray-950 text-lg font-medium">Events</li></a>
-          <a href="aboutUs.html"><li class="text-gray-950 text-lg font-medium">About us</li></a>
-          <a href="contactUs.html"><li class="text-gray-950 text-lg font-medium">Contact us</li></a>
-          <a href="blog.html"><li class="text-gray-950 text-lg font-medium">Blog</li></a>
-        </ul>
-        <a href="getInvolved.html" class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5 w-full">Get involved</a>
-    </div>
-  </section>
+
+<!--Header and Nav Bar-->
+<section class="w-full mx-auto">
+  <div id="nav-bar" class="w-full flex items-center bg-white px-[1.3rem] lg:px-[50px] py-5 shadow-md justify-between">
+    <a href="./index.html"><img class="w-[120px] lg:w-[170px]" src="images/TalentMakers Logosvg.svg" alt=""></a>
+      <ul id="nav-links" class="hidden lg:flex justify-start items-center gap-10">
+        <a href="./index.html"><li class="text-greyColor text-lg font-medium">Home</li></a>
+        <a href=""><li class="text-priColor text-lg font-bold">Programs</li></a>
+        <a href=""><li class="text-greyColor text-lg font-medium">Events</li></a>
+        <a href=""><li class="text-greyColor text-lg font-medium">About us</li></a>
+        <a href=""><li class="text-greyColor text-lg font-medium">Contact us</li></a>
+        <a href=""><li class="text-greyColor text-lg font-medium">Blog</li></a>
+      </ul>
+      <div id="menu-btn" class="lg:hidden"><i class="fa-solid fa-bars" style="color: #000000;"></i></div>
+      <a href=""class="hidden lg:flex px-5 py-2.5 bg-priColor text-white text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Get involved</a>
+  </div>
+  <div class="hidden w-[291px] h-[291px] bg-[#ffd700] rounded-full absolute mb-10"></div>
+</section>
+
+<!--Menu popup-->
+<section id="mobileMenu" class="w-full gap-[10px] lg:gap-[20px] hidden lg:hidden flex-col items-center justify-center z-20 shadow-xl absolute duration-100 transition-transform">
+<div class="p-5 bg-white rounded-b-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%] h-full">
+  <div id="" class="flex flex-col items-center justify-center gap-10">
+      <ul id="" class="flex flex-col justify-start items-center gap-10">
+        <a href="./index.html"><li class="text-gray-950 text-lg font-medium">Home</li></a>
+        <a href="./programs.html"><li class="text-gray-950 text-lg font-medium">Programs</li></a>
+        <a href="events.html"><li class="text-gray-950 text-lg font-medium">Events</li></a>
+        <a href="aboutUs.html"><li class="text-gray-950 text-lg font-medium">About us</li></a>
+        <a href="contactUs.html"><li class="text-gray-950 text-lg font-medium">Contact us</li></a>
+        <a href="blog.html"><li class="text-gray-950 text-lg font-medium">Blog</li></a>
+      </ul>
+      <a href="getInvolved.html" class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5 w-full">Get involved</a>
+  </div>
+</section>
 
   <!--Hero Section-->
-  <section id="hero-section" class="lg:max-w-[85rem] px-6 lg:px-0 w-full flex flex-col lg:flex-row mx-auto mt-[80px] lg:mt-[80px] justify-start lg:justify-between items-center gap-[40px] lg:gap-0">
-    <div class="flex flex-col gap-[20px] items-start">
-      <h1 class="text-gray-900 text-2xl lg:text-5xl font-bold leading-[30px] lg:leading-[64px]">Empower Your Future with <br/>World-Class IT Education</h1>
-      <p class="hidden lg:flex text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Discover a range of cutting-edge programs designed to equip African youth  <br/>with the skills they need to thrive in the digital economy.</p>
-      <p class="lg:hidden text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Discover a range of cutting-edge programs designed to equip African youth with the skills they need to thrive in the digital economy.</p>
-    </div>
-      <img class="w-full lg:w-[610px] h-[248px] lg:h-[526px] rounded-[5px]" src="images/programs/programs-hero .png"/>
-  </section>
-
-  <!--All programs Section-->
-  <section id="explore-IT-section" class="lg:max-w-[85rem] px-6 lg:px-0 w-full flex flex-col mx-auto mt-[80px] lg:mt-[150px] justify-center items-center gap-[40px] lg:gap-[40px]">
-    <div id="all-programs-sec" class="flex lg:flex-wrap flex-col lg:flex-row justify-between items-center gap-5">
-        <!---All the cards are here-->
-      <!---Start of first card-->
-      <div class="flex p-5 bg-white rounded-[10px] lg:max-w-[310px] xl:max-w-[320px] flex-col justify-center items-start gap-5">
-        <img class="w-full rounded-[5px] max-w-[300px]" src="images/web_dev image.png" alt="">
-        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose line-clamp-2">Web Development Bootcamp</h6>
-        <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7 line-clamp-2">Learn to build modern, responsive websites using HTML, CSS, JavaScript websites using HTML, CSS, JavaScript</p>
-        <div class="flex gap-5 items-center justify-start">
-          <div class="flex gap-2">
-            <img src="images/price_tag.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">FREE</p>
-          </div>
-          <div class="w-1.5 h-1.5 bg-[#e0e1e2] rounded-full"></div>
-          <div class="flex gap-2">
-            <img src="images/clock.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">12 weeks</p>
-          </div>
-        </div>
-        <a class="py-2.5 rounded-[10px] flex justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose" href="./programsDescription.html">View program <i class="fa-solid fa-arrow-right" style="color: #6a0dad;"></i></a>
-      </div>
-      <!---End of first card-->
-      <div class="lg:max-w-[310px] xl:max-w-[320px] flex p-5 bg-white rounded-[10px] flex-col justify-center items-start gap-5">
-        <img class="w-full rounded-[5px] max-w-[300px]" src="images/web_dev image.png" alt="">
-        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose line-clamp-2">Web Development Bootcamp</h6>
-        <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7 line-clamp-2">Learn to build modern, responsive websites using HTML, CSS, JavaScript websites using HTML, CSS, JavaScript</p>
-        <div class="flex gap-5 items-center justify-start">
-          <div class="flex gap-2">
-            <img src="images/price_tag.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">FREE</p>
-          </div>
-          <div class="w-1.5 h-1.5 bg-[#e0e1e2] rounded-full"></div>
-          <div class="flex gap-2">
-            <img src="images/clock.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">12 weeks</p>
-          </div>
-        </div>
-        <a class="py-2.5 rounded-[10px] flex justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose" href="">View program <i class="fa-solid fa-arrow-right" style="color: #6a0dad;"></i></a>
-      </div>
-      <div class="lg:max-w-[310px] xl:max-w-[320px] flex p-5 bg-white rounded-[10px] flex-col justify-center items-start gap-5">
-        <img class="w-full rounded-[5px] max-w-[300px]" src="images/web_dev image.png" alt="">
-        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose line-clamp-2">Web Development Bootcamp</h6>
-        <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7 line-clamp-2">Learn to build modern, responsive websites using HTML, CSS, JavaScript websites using HTML, CSS, JavaScript</p>
-        <div class="flex gap-5 items-center justify-start">
-          <div class="flex gap-2">
-            <img src="images/price_tag.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">FREE</p>
-          </div>
-          <div class="w-1.5 h-1.5 bg-[#e0e1e2] rounded-full"></div>
-          <div class="flex gap-2">
-            <img src="images/clock.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">12 weeks</p>
-          </div>
-        </div>
-        <a class="py-2.5 rounded-[10px] flex justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose" href="">View program <i class="fa-solid fa-arrow-right" style="color: #6a0dad;"></i></a>
-      </div>
-      <div class="lg:max-w-[310px] xl:max-w-[320px] flex p-5 bg-white rounded-[10px] flex-col justify-center items-start gap-5">
-        <img class="w-full rounded-[5px] max-w-[300px]" src="images/web_dev image.png" alt="">
-        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose line-clamp-2">Web Development Bootcamp</h6>
-        <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7 line-clamp-2">Learn to build modern, responsive websites using HTML, CSS, JavaScript websites using HTML, CSS, JavaScript</p>
-        <div class="flex gap-5 items-center justify-start">
-          <div class="flex gap-2">
-            <img src="images/price_tag.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">FREE</p>
-          </div>
-          <div class="w-1.5 h-1.5 bg-[#e0e1e2] rounded-full"></div>
-          <div class="flex gap-2">
-            <img src="images/clock.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">12 weeks</p>
-          </div>
-        </div>
-        <a class="py-2.5 rounded-[10px] flex justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose" href="">View program <i class="fa-solid fa-arrow-right" style="color: #6a0dad;"></i></a>
-      </div>
-      <div class="lg:max-w-[310px] xl:max-w-[320px] flex p-5 bg-white rounded-[10px] flex-col justify-center items-start gap-5">
-        <img class="w-full rounded-[5px] max-w-[300px]" src="images/web_dev image.png" alt="">
-        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose line-clamp-2">Web Development Bootcamp</h6>
-        <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7 line-clamp-2">Learn to build modern, responsive websites using HTML, CSS, JavaScript websites using HTML, CSS, JavaScript</p>
-        <div class="flex gap-5 items-center justify-start">
-          <div class="flex gap-2">
-            <img src="images/price_tag.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">FREE</p>
-          </div>
-          <div class="w-1.5 h-1.5 bg-[#e0e1e2] rounded-full"></div>
-          <div class="flex gap-2">
-            <img src="images/clock.svg" alt="">
-            <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">12 weeks</p>
-          </div>
-        </div>
-        <a class="py-2.5 rounded-[10px] flex justify-center items-center gap-2.5 text-priColor text-[16px] font-medium leading-loose" href="">View program <i class="fa-solid fa-arrow-right" style="color: #6a0dad;"></i></a>
-      </div>
-
+  <section id="" class="w-full h-[80%] px-6 py-10 lg:py-20 lg:px-0 flex flex-col mx-auto justify-center items-center gap-[40px] lg:gap-[40px] bg-[url('../images/programs/programsHeroImg.png')] bg-cover bg-center bg-no-repeat">
+    <div class="flex flex-col gap-[20px] items-center justify-center text-center w-full lg:w-1/2">
+      <h1 class="text-white text-2xl lg:text-5xl font-bold leading-[30px] lg:leading-[64px]">Empowering the Next Generation of Innovators</h1>
+      <p class="text-white text-base lg:text-lg font-normal leading-tight lg:leading-7">Explore our programs designed to equip you with knowledge, skills, and opportunities to create meaningful impact.</p>
+      <button id="open-program-form-btn" class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5" type="button">Join a program</button>
     </div>
   </section>
 
-<!--What set us apart Section-->
+<!--Unlock opportunities Section-->
   <section id="what-set-us-apart-section" class="lg:max-w-[85rem] px-6 lg:px-0 w-full flex flex-col lg:flex-row mx-auto mt-[80px] lg:mt-[150px] justify-between items-center gap-[40px] lg:gap-[80px]">
     <div class="flex flex-col items-start justify-start gap-[20px] w-full">
-      <h2 class="text-gray-900 text-xl lg:text-[36px] font-bold leading-normal lg:leading-[44px]">What Sets Us Apart?</h2>
+      <h2 class="text-gray-900 text-xl lg:text-[36px] font-bold leading-normal lg:leading-[44px]">Unlock Opportunities with Our Programs</h2>
+      <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">At TalentMakers Foundation, our programs are designed to empower individuals with the skills, knowledge, and opportunities needed to thrive in today's digital world. We focus on bridging the digital divide, fostering leadership, and equipping participants with practical skills to create a lasting impact in their communities.</p>
       <div class="flex flex-col gap-[10px] justify-start items-start">
+        <p class="text-gray-900 text-base lg:text-lg font-bold leading-tight lg:leading-7">What You’ll Gain</p>
         <div class="flex items-center justify-center gap-[10px]">
           <img src="images/checkmark.png" alt="" srcset="">
           <div class="flex flex-col items-start justify-start gap-[10px]">
-            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Covering emerging technologies such as AI, Data Science, and Web Development.</p>
+            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Foundational IT skills for digital literacy</p>
           </div>
         </div>
         <div class="flex items-center justify-center gap-[10px]">
           <img src="images/checkmark.png" alt="" srcset="">
           <div class="flex flex-col items-start justify-start gap-[10px]">
-            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Hands-on learning and real-world projects.</p>
+            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Leadership & mentorship opportunitiesp>
           </div>
         </div>
         <div class="flex items-center justify-center gap-[10px]">
           <img src="images/checkmark.png" alt="" srcset="">
           <div class="flex flex-col items-start justify-start gap-[10px]">
-            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Job placement and entrepreneurship support.</p>
+            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Hands-on learning through workshops & training</p>
           </div>
         </div>
         <div class="flex items-center justify-center gap-[10px]">
           <img src="images/checkmark.png" alt="" srcset="">
           <div class="flex flex-col items-start justify-start gap-[10px]">
-            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Access to a vibrant alumni network.</p>
+            <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">A supportive community of like-minded changemakers</p>
           </div>
         </div>
-        
       </div>
     </div>
-    <img class="w-full lg:w-[610px] lg:h-[407px] rounded-[10px]" src="images/programs/programs-pageImg2 .png" />
+    <img class="w-full lg:w-[610px] lg:h-[407px] rounded-[10px] object-cover" src="images/programs/UnlockOpportunities.png" />
   </section>
+
+   <!--IT Awareness program Section-->
+ <section id="" class="px-[1.3rem] lg:px-[70px] py-[2.6rem] lg:py-[70px] bg-lightBg w-full flex flex-col mx-auto mt-[80px] lg:mt-[150px] justify-between items-center gap-[40px] lg:gap-[40px]">
+  <div class="flex flex-col items-center justify-center gap-[20px] w-full">
+    <h2 class="text-gray-900 text-xl lg:text-[36px] font-bold leading-normal lg:leading-[44px]">IT Awareness Program</h2>
+    <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Learn essential IT skills, stay safe online, and explore tech career paths. Start your journey today!</p>
+  </div>
+  <img class="w-full md:w-[70%]" src="images/programs/itAwareness.png" alt="">
+  <!--Program Info-->
+  <div class="flex flex-col items-start justify-between w-full gap-5">
+    <div class="flex flex-col md:flex-row items-start justify-between w-full gap-5">
+      <!--Overview-->
+      <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[20px] inline-flex w-full md:w-[49%] md:h-[300px]">
+        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose">Overview</h6>
+        <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7">The IT Awareness Program is designed to introduce participants to fundamental IT concepts, digital tools, and online safety. In today’s digital world, understanding technology is essential for both personal and professional growth. This program helps bridge the gap by providing basic IT skills and knowledge, ensuring participants can navigate the digital space confidently.</p>
+      </div>
+      <!--How it works-->
+      <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[20px] inline-flex w-full md:w-[49%] md:h-[300px]">
+        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose"> How It Works</h6>
+        <div class="flex flex-col gap-[10px] justify-start items-start">
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Foundational IT skills for digital literacy</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Leadership & mentorship opportunities</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Hands-on learning through workshops & training</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">A supportive community of like-minded changemakers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-start justify-between w-full gap-5">
+      <!--Key Focus Areas-->
+      <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[20px] inline-flex w-full md:w-[49%] md:h-[300px]">
+        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose">Key Focus Areas</h6>
+        <div class="flex flex-col gap-[10px] justify-start items-start">
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Introduction to IT & Digital Tools</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Cybersecurity & Online Safety</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Internet & Social Media Best Practices</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Career Opportunities in Tech</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Overview-->
+      <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[20px] inline-flex w-full md:w-[49%] md:h-[300px]">
+        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose">Who Can Join?</h6>
+        <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7">Anyone looking to gain basic IT knowledge, including students, job seekers, and professionals looking to improve their digital skills.
+         <br><br> Ready to get started? Click "Join Program" button below to sign up and begin your journey toward digital empowerment!</p>
+         <button id="open-program-form-btn2" class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5" type="button">Join program</button>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!--Ambassador program Section-->
+  <section id="what-set-us-apart-section" class="lg:max-w-[85rem] px-6 lg:px-0 w-full flex flex-col mx-auto mt-[80px] lg:mt-[150px] justify-between items-center gap-[40px] lg:gap-[40px]">
+    <div class="flex flex-col items-center justify-center gap-[20px] w-full lg:w-[754px]">
+      <h2 class="text-gray-900 text-xl lg:text-[36px] font-bold leading-normal lg:leading-[44px]">Ambassador Program</h2>
+      <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7 w-full">Become a leader in digital literacy. Mentor, inspire, and drive change in your community. Join the Ambassador Program today!</p>
+    </div>
+    <div class="flex flex-col lg:flex-row items-center w-full justify-center gap-10">
+      <div class="flex flex-col items-start justify-start gap-[20px] w-full">
+        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose">Overview</h6>
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">The Ambassador Program is a leadership-driven initiative designed for individuals passionate about spreading digital literacy, mentoring others, and advocating for tech education in their communities. Ambassadors play a key role in empowering others through mentorship, outreach, and advocacy, driving real impact.</p>
+        <div class="flex flex-col gap-[10px] justify-start items-start">
+          <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose">How It Works</h6>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Leadership and public speaking training.</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Hands-on mentorship and outreach activities.</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Collaborations with tech professionals and educators.</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Opportunities to influence and inspire change.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="w-full lg:w-[610px] lg:h-[407px] rounded-[10px] object-cover" src="images/programs/ambassadorProgram.png" />
+    </div>
+
+    <div class="flex flex-col md:flex-row items-start justify-between w-full gap-5">
+      <!--Key Focus Areas-->
+      <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[20px] inline-flex w-full md:w-[49%] md:h-[300px]">
+        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose">Key Focus Areas</h6>
+        <div class="flex flex-col gap-[10px] justify-start items-start">
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Leadership & Public Speaking</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Community Engagement & Mentorship</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Digital Advocacy & Awareness</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-[10px]">
+            <img src="images/checkmark.png" alt="" srcset="">
+            <div class="flex flex-col items-start justify-start gap-[10px]">
+              <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Empowering Others Through Technology</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Overview-->
+      <div class="p-5 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[20px] inline-flex w-full md:w-[49%] md:h-[300px]">
+        <h6 class="text-gray-900 text-base lg:text-2xl font-bold leading-loose">Who Can Join?</h6>
+        <p class="text-gray-900 text-base lg:text-lg text-left font-normal leading-tight lg:leading-7">Anyone passionate about mentorship, leadership, and making a difference in their community.
+         <br><br> Ready to lead and inspire? Click "Join Program" button to become an ambassador today!</p>
+         <button id="open-program-form-btn3" class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5" type="button">Join program</button>
+      </div>
+    </div>
+  </div>
+  </section>
+
+    <!--Frequently asked question Section-->
+ <section id="" class="lg:max-w-[85rem] px-6 lg:px-0 w-full flex flex-col mx-auto mt-[80px] lg:mt-[150px] mb-[40px] justify-center items-center gap-[40px] lg:gap-[40px]">
+  <div class="flex flex-col items-center justify-center gap-[20px] w-full lg:w-[754px]">
+    <h2 class="text-gray-900 text-xl lg:text-[36px] font-bold leading-normal lg:leading-[44px]">Frequently Asked Questions</h2>
+  </div>
+  <!--All questions-->
+  <div class="flex flex-col lg:flex-row lg:flex-wrap justify-center items-start w-full gap-[20px]">
+    <!--Question box: This can be made dynamic from the admin dashboard-->
+    <details class="p-4 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[10px] inline-flex w-full lg:w-[40%]">
+      <summary class="flex items-center justify-between w-full gap-5">
+        <!--Question-->
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold leading-tight line-clamp-2">What is the IT Awareness Program about?</h6>
+        <svg class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <!--Answer-->
+      <div class="px-2 py-3 bg-gray-100">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">No prior experience needed; basic computer skills are a plus.The IT Awareness Program introduces participants to essential digital skills, 
+          cybersecurity, and career opportunities in tech.</p>
+      </div>
+    </details>
+    <!--End Question box-->
+    <details class="p-4 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[10px] inline-flex w-full lg:w-[40%]">
+      <summary class="flex items-center justify-between w-full gap-5">
+        <!--Question-->
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold leading-tight line-clamp-2">Who can apply for the Ambassador Program?</h6>
+        <svg class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <!--Answer-->
+      <div class="px-2 py-3 bg-gray-100">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Anyone passionate about mentorship, leadership, and advocating for digital literacy in their community can join.</p>
+      </div>
+    </details>
+    <details class="p-4 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[10px] inline-flex w-full lg:w-[40%]">
+      <summary class="flex items-center justify-between w-full gap-5">
+        <!--Question-->
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold leading-tight line-clamp-2">Are these programs free?</h6>
+        <svg class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <!--Answer-->
+      <div class="px-2 py-3 bg-gray-100">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Yes, all TalentMakers Foundation programs are offered at no cost to participants.</p>
+      </div>
+    </details>
+    <details class="p-4 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[10px] inline-flex w-full lg:w-[40%]">
+      <summary class="flex items-center justify-between w-full gap-5">
+        <!--Question-->
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold leading-tight line-clamp-2">Is prior tech experience required to join?</h6>
+        <svg class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <!--Answer-->
+      <div class="px-2 py-3 bg-gray-100">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">No, our programs cater to beginners and those looking to enhance their digital skills.</p>
+      </div>
+    </details>
+    <details class="p-4 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[10px] inline-flex w-full lg:w-[40%]">
+      <summary class="flex items-center justify-between w-full gap-5">
+        <!--Question-->
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold leading-tight line-clamp-2">How do I apply for a program?</h6>
+        <svg class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <!--Answer-->
+      <div class="px-2 py-3 bg-gray-100">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">You can apply by filling out the registration form on our website under the Programs section.</p>
+      </div>
+    </details>
+    <details class="p-4 rounded-[20px] border border-[#d0d2d3] flex-col justify-start items-start gap-[10px] inline-flex w-full lg:w-[40%]">
+      <summary class="flex items-center justify-between w-full gap-5">
+        <!--Question-->
+        <h6 class="text-gray-900 text-base lg:text-lg font-bold leading-tight line-clamp-2">What is expected of an Ambassador?</h6>
+        <svg class="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <!--Answer-->
+      <div class="px-2 py-3 bg-gray-100">
+        <p class="text-gray-900 text-base lg:text-lg font-normal leading-tight lg:leading-7">Ambassadors promote digital literacy, mentor participants, and help expand the impact of TalentMakers Foundation.</p>
+      </div>
+    </details>
+  </div>
+  </section>
+
 
  <!--Get involved Section-->
  <section id="get-involved-section" class="max-w-sm lg:max-w-[85rem] px-6 py-10 lg:py-20 lg:px-0 flex flex-col mx-auto mt-[80px] lg:mt-[150px] justify-center items-center gap-[40px] lg:gap-[40px] bg-[url('../images/getInvolved_Desktop.png')] md:bg-[url('../images/getInvolved_Desktop.png')] bg-cover bg-center bg-no-repeat rounded-[20px]">
     <div class="flex flex-col gap-[20px] items-center justify-center text-center">
       <h1 class="text-white text-2xl lg:text-5xl font-bold leading-[30px] lg:leading-[64px]">Join Us in Empowering Talents</h1>
       <p class="text-white text-base lg:text-lg font-normal leading-tight lg:leading-7">Together, we can create opportunities, foster innovation, and drive lasting change. Be a <br> part of the movement to transform lives through technology and education</p>
-      <a href=""class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Get involved</a>
+      <a href="getInvolved.html"class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Get involved</a>
     </div>
     </section>
   
