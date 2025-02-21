@@ -26,6 +26,44 @@
   <body class="bg-[#F4F4F4]"></body>
 </html>
 
+  <!--Share event popup-->
+  <section id="share-article-section" class="p-6 w-full gap-[10px] lg:gap-[20px] hidden flex-col items-center justify-center h-screen top-0 z-50 bg-black/70 fixed">
+   <div class="p-5 bg-white rounded-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%]">
+     <div class="flex items-center justify-center gap-[20px] w-full">
+       <h2 class="text-gray-900 text-xl lg:text-2xl font-bold leading-normal lg:leading-[44px] w-full text-center">Share Event to Friends!</h2>
+       <div id="close-Share-article-popup" class="cursor-pointer"><i class="fa-solid fa-xmark" style="color: #000000;"></i></div>
+     </div>
+     <div class="flex flex-col items-start justify-start gap-2.5 w-full">
+       <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Share this event via:</p>
+       <div class="flex items-center justify-start gap-5">
+         <a href="#" id="shareFacebook" target="_blank">
+           <div class="cursor-pointer bg-lightBg w-[40px] h-[40px] rounded-full justify-center text-base lg:text-lg items-center inline-flex">
+             <i class="fa-brands fa-facebook" style="color: #111827;"></i>
+           </div>
+         </a>
+         <a href="#" id="shareTwitter" target="_blank">
+           <div class="cursor-pointer bg-lightBg w-[40px] h-[40px] rounded-full justify-center text-base lg:text-lg items-center inline-flex">
+             <i class="fa-brands fa-x-twitter" style="color: #111827;"></i>
+           </div>
+         </a>
+         <a href="#" id="shareLinkedIn" target="_blank">
+           <div class="cursor-pointer bg-lightBg w-[40px] h-[40px] rounded-full justify-center text-base lg:text-lg items-center inline-flex">
+             <i class="fa-brands fa-linkedin" style="color: #111827;"></i>
+           </div>
+         </a>
+       </div>
+     </div>
+     <div class="flex flex-col items-start justify-start gap-2.5 w-full">
+       <p class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7">Or copy link:</p>
+       <div class="flex items-center justify-start gap-2.5 px-3 py-3 bg-lightBg rounded-lg w-full">
+         <i class="fa-solid fa-link"  style="color: #111827;"></i>
+         <p id="articleLink" class="text-gray-900 text-base lg:text-lg font-normal text-left leading-tight lg:leading-7 line-clamp-1"></p>
+         <button id="copyLink" class="flex px-5 py-2.5 bg-priColor text-white text-xl font-medium cursor-pointer rounded-[10px] justify-center items-center gap-2.5">Copy</button>
+       </div>
+     </div>
+   </div>
+  </section> 
+
  <!--Registration form popup-->
  <section id="progam-form-popup-section" class="p-6 w-full gap-[10px] lg:gap-[20px] hidden flex-col items-center justify-center h-full z-20 bg-black/70 fixed">
   <div class="p-5 bg-white rounded-[20px] flex-col justify-start items-center gap-5 inline-flex w-full lg:w-[40%] h-full">
@@ -403,11 +441,26 @@
         <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">Lagos, Nigeria</p>
       </div>
       <button id="open-program-form-btn" class="lg:flex px-5 py-2.5 bg-priColor text-white text-[16px] lg:text-xl font-medium  rounded-[10px] justify-center items-center gap-2.5">Register now</button>
-      <!--Countdown-->
-      <div class="flex gap-2">
-        <img src="images/hourGlass.svg" alt="">
-        <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">5 days left</p>
-      </div>  
+      <!--Countdown, share and social media links-->
+      <div class="py-5 border-y border-[#d0d2d3] justify-between items-center inline-flex w-full">
+        <div class="flex gap-5 items-center justify-start">
+        <!--Countdown-->
+        <div class="flex gap-2">
+          <img src="images/hourGlass.svg" alt="">
+          <p class="text-gray-900 text-base lg:text-lg font-normal text-center leading-tight lg:leading-7">5 days left</p>
+        </div> 
+          <!--Share article-->
+          <div id="open-Share-article-popup" class="flex items-center cursor-pointer gap-2.5 justify-start">
+            <button class="justify-start items-center gap-2 inline-flex"><img src="images/shareBtn.svg" alt=""></button>
+          </div>
+        </div>
+        <!--TalentMakers Social media pages-->
+        <div class="flex items-center gap-5 justify-start">
+          <a href="" class="text-base lg:text-lg"><i class="fa-brands fa-facebook" style="color: #111827;"></i></a>
+          <a href="" class="text-base lg:text-lg"><i class="fa-brands fa-x-twitter" style="color: #111827;"></i></a>
+          <a href="" class="text-base lg:text-lg"><i class="fa-brands fa-linkedin" style="color: #111827;"></i></a>
+        </div>
+      </div> 
     </div>
   </section>
 
