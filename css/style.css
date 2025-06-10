@@ -1411,6 +1411,10 @@ input:checked + .toggle-bg {
   margin-top: 100px;
 }
 
+.mt-\[20px\] {
+  margin-top: 20px;
+}
+
 .mt-\[40px\] {
   margin-top: 40px;
 }
@@ -1588,6 +1592,46 @@ input:checked + .toggle-bg {
   height: 100vh;
 }
 
+.h-3\/4 {
+  height: 75%;
+}
+
+.h-2\/4 {
+  height: 50%;
+}
+
+.h-1\/4 {
+  height: 25%;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-1\/3 {
+  height: 33.333333%;
+}
+
+.h-2\/3 {
+  height: 66.666667%;
+}
+
+.h-40 {
+  height: 10rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-80 {
+  height: 20rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
 .\!w-12 {
   width: 3rem !important;
 }
@@ -1679,6 +1723,14 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .max-w-\[300px\] {
@@ -2028,6 +2080,11 @@ input:checked + .toggle-bg {
   border-color: rgb(106 13 173 / var(--tw-border-opacity, 1));
 }
 
+.\!border-white {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1)) !important;
+}
+
 .\!bg-gray-50 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1)) !important;
@@ -2105,6 +2162,11 @@ input:checked + .toggle-bg {
 
 .bg-white\/50 {
   background-color: rgb(255 255 255 / 0.5);
+}
+
+.bg-yellColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 215 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[url\(\'\.\.\/images\/aboutUs\/aboutUsHero\.png\'\)\] {
@@ -2803,8 +2865,16 @@ input:checked + .toggle-bg {
     margin-top: 100px;
   }
 
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:h-24 {
@@ -2825,6 +2895,10 @@ input:checked + .toggle-bg {
 
   .md\:h-\[500px\] {
     height: 500px;
+  }
+
+  .md\:h-full {
+    height: 100%;
   }
 
   .md\:w-1\/2 {
@@ -2894,6 +2968,10 @@ input:checked + .toggle-bg {
 
   .md\:gap-5 {
     gap: 1.25rem;
+  }
+
+  .md\:overflow-y-hidden {
+    overflow-y: hidden;
   }
 
   .md\:border-l {
@@ -3036,6 +3114,18 @@ input:checked + .toggle-bg {
     height: 100vh;
   }
 
+  .lg\:h-\[200px\] {
+    height: 200px;
+  }
+
+  .lg\:h-\[150px\] {
+    height: 150px;
+  }
+
+  .lg\:h-\[170px\] {
+    height: 170px;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -3080,6 +3170,10 @@ input:checked + .toggle-bg {
     width: 49%;
   }
 
+  .lg\:w-\[60\%\] {
+    width: 60%;
+  }
+
   .lg\:w-\[610px\] {
     width: 610px;
   }
@@ -3104,6 +3198,10 @@ input:checked + .toggle-bg {
     width: 754px;
   }
 
+  .lg\:w-\[899px\] {
+    width: 899px;
+  }
+
   .lg\:w-full {
     width: 100%;
   }
@@ -3114,6 +3212,10 @@ input:checked + .toggle-bg {
 
   .lg\:max-w-5xl {
     max-width: 64rem;
+  }
+
+  .lg\:max-w-60 {
+    max-width: 15rem;
   }
 
   .lg\:max-w-6xl {
